@@ -1,0 +1,10 @@
+#-------------------------------
+# Social Links
+# Example of adding a new link to the footer - {icon: "ion-logo-facebook", link: "https://facebook.com"}
+# Other icons can be found at https://ionicons.com/v4/
+social:
+- {icon: "fa-brands fa-mastodon", link: "https://aus.social/@philip"}
+- {icon: "fa-brands fa-youtube", link: "https://youtube.com/philipmallis"}
+- {icon: "fa-brands fa-flickr", link: "https://flickr.com/philipmallis"}
+- {icon: "fa-brands fa-github", link: "https://github.com/philam"}
+- {icon: "fa-solid fa-rss", link: "../feed.xml"}
