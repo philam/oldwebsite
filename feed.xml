@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-02-27T00:48:44-06:00</updated><id>/feed.xml</id><title type="html">Philip Mallis</title><entry><title type="html">How to export Flickr photos with metadata attached</title><link href="/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached" rel="alternate" type="text/html" title="How to export Flickr photos with metadata attached" /><published>2023-09-11T00:02:21-05:00</published><updated>2023-09-11T00:02:21-05:00</updated><id>/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached</id><content type="html" xml:base="/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached"><![CDATA[<p>I have been a user of Flickr for about eight years. While I have no plans to move away, there are many reasons why someone would want to export their photos and videos.</p>
+
+<p>Having spent many hours reading through forum posts, documentation and Github repositories, I want to share my method of how I achieved this. It wasn’t easy.</p>
+
+<p>If you want to skip the backstory and go straight to the method, click <a href="#method-that-works" title="here">here</a>.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>What I needed was a download of all of my Flickr content with the metadata attached.</p>
+
+<p>The issue is that Flickr only allows you to export photos with the data attached from <strong>before</strong> it was uploaded. So if you were like me, and did at least some editing within Flickr itself, none of this would be attached to the files.</p>
+
+<p>The only thing to do is to either request a data export of all Flickr content, where all of this would be contained in separate .json files, or use a third-party provider.</p>
+
+<p>This also assumes that you are only downloading your own Flickr content and not someone else’s.</p>
+
+<h2 id="what-i-tried">What I tried</h2>
+
+<p>Eventually I finally figured out that since 2020, Flickr have added additional numbers to file names. As a result, the [8] in the command that captures the image ID number in Step 6 below should now be an [11]. And that’s what finally made it work!</p>
+
+<h2 id="method-that-works">Method that works</h2>
+
+<p>This works on Linux but should also work on Windows with the necessary tweaks.</p>
+
+<p>Before you start, install:</p>
+
+<ul>
+  <li><a href="http://downthemall.org/">Downthemall</a></li>
+  <li><a href="http://exiftool.org/" title="Exiftool">Exiftool</a></li>
+</ul>
+
+<p>Then follow these steps:</p>
+
+<ol>
+  <li>Navigate to Flickr account settings page to download your entire Flickr archive</li>
+  <li>Use Downthemall (right-click) and filter by .zip files to download all of the files into the folder of your choice</li>
+  <li>Extract all of the archives into a single folder (right-click and go ‘extract’ in 7Zip or whatever)</li>
+  <li>Run this command in your command prompt/console: <code class="language-plaintext highlighter-rouge">exiftool -s file.json</code> (change [file.json] to the path to any photo file in that folder)</li>
+  <li>Read the output and select which tags you want to extract. Then match these tags to whichever items you want to attach the image to on this list of supported EXIF metadata: <a href="https://exiv2.org/tags.html">https://exiv2.org/tags.html</a></li>
+  <li>Run this command in your command prompt/console: <code class="language-plaintext highlighter-rouge">exiftool -AddTagsFromFile %dphoto_%-11.2f.json "-keywords&lt;AlbumsTitle" "-ImageDescription&lt;Title" "-gpslatitude&lt;GeoLatitude" "-gpslongitude&lt;GeoLongitude" "-name&lt;Name" "-keywords&lt;TagsTag" "-ProfileCopyright&lt;License" &lt;fullfilepath&gt; </code>(note that all of the items in double quotation marks are examples only, you should change these to the tags that you want as outlined in Step 5 – the first name being what is listed in the exiv2.org link earlier, the second being what the output shows in Step 4. Also change &lt;fullfilepath&gt; to the path shown when you drag and drop a file into the terminal, for some reason relative paths weren’t working for me.)</li>
+  <li>Execute the command.</li>
+  <li>Once this is completed, check one of the new image files by running <code class="language-plaintext highlighter-rouge">exiftool -s</code> again on one of them to see that it has everything you need.</li>
+  <li>If you are like me, you ended up with a second copy of these files. To get rid of these, run &lt;COMMAND&gt;</li>
+  <li>Open your photos in the photo editor/organiser of your choice (I use and recommend <a href="https://www.digikam.org/">Digikam</a>).</li>
+</ol>
+
+<p>Congratulations, that should be all!</p>
+
+<p>Once that’s done, you may want to sort them. Exiftool has a lot of different ways to do this. One of the most common is organising by date and time. If you are interested in doing this, I found this page to be the most helpful: https://exiftool.org/filename.html</p>
+
+<p>Many thanks to the many people who created resources previously to explain this. For further reading and information, please go to these places:</p>
+
+<ul>
+  <li><a href="https://exiftool.org/forum/index.php?topic=11072.0">https://exiftool.org/forum/index.php?topic=11072.0</a></li>
+  <li><a href="https://exiftool.org/exiftool_pod.html">https://exiftool.org/exiftool_pod.html</a></li>
+</ul>]]></content><author><name>Philip</name></author><category term="Photography" /><category term="Flickr" /><summary type="html"><![CDATA[I have been a user of Flickr for about eight years. While I have no plans to move away, there are many reasons why someone would want to export their photos and videos.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flickr_logo_-_SuperTinyIcons.svg" /><media:content medium="image" url="https://upload.wikimedia.org/wikipedia/commons/f/f4/Flickr_logo_-_SuperTinyIcons.svg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">What is a 2 hour myki fare?</title><link href="/blog/2023/06/17/what-is-a-2-hour-myki-fare" rel="alternate" type="text/html" title="What is a 2 hour myki fare?" /><published>2023-06-17T17:00:00-05:00</published><updated>2023-06-17T17:00:00-05:00</updated><id>/blog/2023/06/17/what-is-a-2-hour-myki-fare</id><content type="html" xml:base="/blog/2023/06/17/what-is-a-2-hour-myki-fare"><![CDATA[<p><a href="https://www.ptv.vic.gov.au/tickets/myki">myki</a> has been in place as Melbourne’s public transport ticketing system for over a decade. It has benefits and drawbacks that could take up space for many posts. But in this one I want to focus on answering one apparently difficult question – what exactly is a 2 hour myki fare?</p>
+
+<p>With myki, there are two fare types that you can use with ‘myki money’ – i.e. topping up as you go rather than purchasing a ticket for a fixed period. These are <strong>daily</strong> and <strong>2 hour</strong>.</p>
+
+<p>This is calculated using the times when the system detects your myki card. With myki, you must touch on by tapping your card to a reader every time you start a trip. In most, but not all cases, you also need to touch off.</p>
+
+<p>When PTV introduced 2 hour fares as part of myki there was a grace period built in. This meant that your ticket would be valid for more than two hours – <a href="https://richardleonard.wordpress.com/2014/08/09/myki-how-to-make-the-most-of-the-new-2-hour-fare/">sometimes up to almost three</a>.</p>
+
+<p>Since August 2014, this has been changed to last exactly two hours.</p>
+
+<p>The confusion here mainly lies with when exactly this two hour period begins and ends.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/42125384484/" title="New myki reader at Rosanna Station"><img src="https://live.staticflickr.com/1744/42125384484_ea2d9b46f8.jpg" alt="New myki reader at Rosanna Station" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>&lt;div aria-hidden="true" class="wp-block-spacer" style="height:30px"&gt;&lt;/div&gt;<a href="https://philipmallis.com/blog/2020/10/17/how-to-improve-ptv-disruption-information/" title="How to improve PTV disruption information">As usual</a>, the PTV website is of no help at all. In several places, it states conflicting, incorrect or confusing information when trying to explain. For example:</p>
+
+<blockquote>
+  <p>“2 hour myki money fare between where a customer boards and the zone at the end of the service.Cell [sic]”</p>
+
+  <p><cite><a href="https://www.ptv.vic.gov.au/tickets/fares/metropolitan-fares/">https://www.ptv.vic.gov.au/tickets/fares/metropolitan-fares/</a></cite></p>
+</blockquote>
+
+<blockquote>
+  <p>“Your first touch on creates a 2 hour fare. If you’re still travelling after 2 hours, you’ll be charged a daily fare.”</p>
+
+  <p><cite><a href="https://www.ptv.vic.gov.au/tickets/myki/buy-a-myki-and-top-up/myki-money/">https://www.ptv.vic.gov.au/tickets/myki/buy-a-myki-and-top-up/myki-money/</a></cite></p>
+</blockquote>
+
+<p>This doesn’t really help to answer the question. In fact, the second statement is wrong.</p>
+
+<p>To find the answer, we have to go digging around in the 128-page <a href="https://www.ptv.vic.gov.au/footer/legal-and-policies/victorian-fares-and-ticketing-manual/">Victorian Fares and Ticketing Manual</a>.</p>
+
+<p>On page 44 we find:</p>
+
+<blockquote>
+  <p>“Within the zone(s) covered by it, the 2 hour product authorises travel that extends beyond the time of its expiry, as long as the myki is touched on before that expiry, subject to the Conditions in this Chapter.”</p>
+
+  <p><cite>Victorian Fares and Ticketing Conditions 2022</cite></p>
+</blockquote>
+
+<p>What does this mean?</p>
+
+<p><strong>The 2 hour period for your myki fare begins and ends from when you touch on your card, not touching off.</strong></p>
+
+<p>For example, you touch on at 10:00am on a 903 bus at Box Hill. You alight at Northland Shopping Centre at 10:45am. You do some shopping, catch up with friends, contemplate life – whatever. You then catch a bus back to Box Hill and touch on your myki at Northland at 11:45am – so one hour and 45 minutes after you first touched on at Box Hill. So even though this bus arrives back at Box Hill at 12:30pm and you touch off outside of the 2 hour period, you will only be charged a 2 hour fare.</p>
+
+<p>Makes sense? Hopefully that helps to clear things up a little bit. If you still have any questions, let me know in the comments below and I’ll try to help as best as I can.</p>
+
+<p><em>Note: there are some situations where a 2 hour fare will be valid for longer than two hours – for example, early bird on trains. For the purposes of this post I’m only talking about a ‘regular’ 2 hour fare outside of these exceptions. If you want to know more about these, start on this page on the PTV website: <a href="https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki/travel-benefits/">https://www.ptv.vic.gov.au/tickets/myki/travel-with-myki/travel-benefits</a>/</em></p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Melbourne" /><category term="myki" /><category term="PTV" /><summary type="html"><![CDATA[myki has been in place as Melbourne’s public transport ticketing system for over a decade. It has benefits and drawbacks that could take up space for many posts. But in this one I want to focus on answering one apparently difficult question – what exactly is a 2 hour myki fare?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://live.staticflickr.com/1744/42125384484_ea2d9b46f8.jpg" /><media:content medium="image" url="https://live.staticflickr.com/1744/42125384484_ea2d9b46f8.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Removing maps from bus stops and the digital divide</title><link href="/blog/2023/01/30/removing-maps-from-bus-stops-and-the-digital-divide" rel="alternate" type="text/html" title="Removing maps from bus stops and the digital divide" /><published>2023-01-30T19:00:00-06:00</published><updated>2023-01-30T19:00:00-06:00</updated><id>/blog/2023/01/30/removing-maps-from-bus-stops-and-the-digital-divide</id><content type="html" xml:base="/blog/2023/01/30/removing-maps-from-bus-stops-and-the-digital-divide"><![CDATA[<p>Today the response that you will likely get to any query to Public Transport Victoria (PTV) will advise you to use the <a href="https://www.ptv.vic.gov.au">website</a>, <a href="https://www.ptv.vic.gov.au/footer/about-ptv/digital-tools/mobile-apps/">app</a> or <a href="https://www.ptv.vic.gov.au/journey/">journey planner</a>. Much of the advertising and marketing also attempts to send people in this direction.</p>
+
+<p>This push to get everyone to use digital tools has accelerated over the past few years.</p>
+
+<p>While digital information and tools are very useful, they will never be a complete substitute for high-quality ‘real life’ passenger information.</p>
+
+<p>The key point here is that computers cannot understand or display information unless it is told to them by humans. There are many nuances and attributes specific to locations that need careful understanding to both process and display information that is readable and useful for people.</p>
+
+<p>The end result in the case of public transport is that incorrect, misleading or confusing information is given to passengers. This creates bad experiences. We know this then leads to people avoiding public transport and perpetuates negative perceptions.</p>
+
+<p>There is a lot to talk about with this topic and I have <a href="https://philipmallis.com/blog/2020/10/17/how-to-improve-ptv-disruption-information/" title="How to improve PTV disruption information">written</a> <a href="https://philipmallis.com/blog/2022/12/06/my-train-disruption-experience-and-how-to-make-it-better/" title="My train disruption experience, and how to make it better">before</a> about some of the many issues with the quality of information put out by PTV.</p>
+
+<p>This time I want to zoom in on bus stops.</p>
+
+<p>To cut a long story short, most bus stops in Melbourne used to contain maps of the local area.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/38216434455/" title="Map of Brimbank public transport, Sunshine"><img src="https://live.staticflickr.com/4635/38216434455_8dd9612d3e_c.jpg" alt="Map of Brimbank public transport, Sunshine" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>Then PTV began removing these from almost all bus stops. They were replaced with either nothing or advertising information – even when it was quite useless.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/49904706892/" title="Bus stop with maps replaced by duplicate myki signs, Churchill"><img src="https://live.staticflickr.com/65535/49904706892_96f4fb5ffd_c.jpg" alt="Bus stop with maps replaced by duplicate myki signs, Churchill" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>Some stops were lucky enough to get a schematic route diagram showing major stops. While this is better and does serve a purpose, it is not a map nor does it show nearly as much information as it did previously.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/51587219825/" title="New style bus route diagram on 609 bus stop on Chandler Highway, Alphington"><img src="https://live.staticflickr.com/65535/51587219825_feb8e88b30_c.jpg" alt="New style bus route diagram on 609 bus stop on Chandler Highway, Alphington" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>The only ones spared or refreshed were at some major interchanges. The few new maps that did go up were actually very good.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/43842372774/" title="New Manningham bus network map at Doncaster Park and Ride"><img src="https://live.staticflickr.com/1885/43842372774_c1845d7d4a_c.jpg" alt="New Manningham bus network map at Doncaster Park and Ride" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>While there was no public statement or information provided by PTV on this program, I can only assume that the reason for doing this was to reduce costs. Revising and replacing hundreds of local area maps across Melbourne would be time-consuming and need resources to complete.</p>
+
+<p>However, I would argue that this would be time and money well spent. There are many scenarios where a map on a bus stop would be useful. Tourists trying to orient themselves in a new area, less frequent passengers getting to their final destination, and people who are unable to use a phone to access digital information for whatever reason.</p>
+
+<p>I should add that this same scenario has played out at tram stops as well, with the same issues and drawbacks.</p>
+
+<p>The new maps implemented at major bus stops and interchanges show that the capability definitely exists within PTV to bring physical maps back to most, if not all stops. I understand that we need to spend time and money where it is most needed as well. But if we want more people to use public transport, then removing or degrading physical information is not going to help.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Bus stop" /><category term="PTV" /><category term="Website" /><summary type="html"><![CDATA[Today the response that you will likely get to any query to Public Transport Victoria (PTV) will advise you to use the website, app or journey planner. Much of the advertising and marketing also attempts to send people in this direction.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://live.staticflickr.com/4635/38216434455_8dd9612d3e_c.jpg" /><media:content medium="image" url="https://live.staticflickr.com/4635/38216434455_8dd9612d3e_c.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Guide to the City Loop closure in January 2022</title><link href="/blog/2023/01/01/guide-to-the-city-loop-closure-in-january-2022" rel="alternate" type="text/html" title="Guide to the City Loop closure in January 2022" /><published>2023-01-01T02:29:01-06:00</published><updated>2023-01-01T02:29:01-06:00</updated><id>/blog/2023/01/01/guide-to-the-city-loop-closure-in-january-2022</id><content type="html" xml:base="/blog/2023/01/01/guide-to-the-city-loop-closure-in-january-2022"><![CDATA[<p>If you are travelling to or around the city by train this month, you will want to know that the entire City Loop will be closed for two weeks from 9pm Monday 2 January to Sunday 15 January.</p>
+
+<p>PTV have a webpage <a href="https://www.ptv.vic.gov.au/disruptions/city-loop-closure/">here</a> on how this will impact you. I thought I would also give it a shot as this will be a significant disruption.</p>
+
+<p><img src="https://philipmallis.com/wp-content/uploads/2023/01/e86b411a5952316c-1024x576.jpg" alt="Photo of a large sign on the floor of Melbourne Central Station saying &quot;This station will be closed from 9pm 2 January to 15 January ptv.vic.gov.au/cityloop&quot;." /></p>
+<hr />
+
+<h4 id="what-is-happening">What is happening?</h4>
+
+<p>There will be no trains at the three underground City Loop stations from 9pm Monday 2 January to Sunday 15 January.</p>
+
+<p>These are:</p>
+
+<ul>
+  <li>Parliament</li>
+  <li>Melbourne Central</li>
+  <li>Flagstaff</li>
+</ul>
+
+<p>This is due to construction works to complete the long-delayed upgrade of <a href="https://www.ptv.vic.gov.au/disruptions/city-loop-upgrades-planned-disruptions/">emergency infrastructure and tunnel intrusion detection</a>. For some reason, it is being delivered by the Level Crossing Removal Project (LXRP).</p>
+
+<h4 id="which-lines-are-affected">Which lines are affected?</h4>
+
+<p>All trains that normally operate through the City Loop will be impacted.</p>
+
+<p>Note that there are other disruptions happening at the same time on the following lines:</p>
+
+<ul>
+  <li>Alamein</li>
+  <li>Cranbourne</li>
+  <li>Frankston</li>
+  <li>Hurstbridge</li>
+  <li>Pakenham</li>
+  <li>Sandringham</li>
+  <li>Stony Point</li>
+</ul>
+
+<p>Please see the disruptions page <a href="https://www.metrotrains.com.au/planned-works/">here</a> for more information.</p>
+
+<h4 id="will-there-be-buses-replacing-trains">Will there be buses replacing trains?</h4>
+
+<p>No. However, there are other public transport options.</p>
+
+<p>Please see the section below for details.</p>
+
+<h4 id="where-can-i-find-more-information">Where can I find more information?</h4>
+
+<p>The main disruptions page for this <a href="https://www.ptv.vic.gov.au/disruptions/major-works-this-summer/major-disruptions-on-metropolitan-trains/">here</a> is inadequate in my opinion. My recommendation is to see this <a href="https://www.metrotrains.com.au/planned-works/">Metro Trains disruptions page</a> which is much better.</p>
+
+<h4 id="how-do-i-get-to-my-destination-in-the-cbd">How do I get to my destination in the CBD?</h4>
+
+<p>There are several options available depending on where you want to go.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Train</th>
+      <th>Tram</th>
+      <th>Bus</th>
+      <th>Walk</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Parliament</td>
+      <td>None</td>
+      <td>Routes 11, 12, 35, 48, 86, 96 and 109</td>
+      <td>Routes 302, 304, 305, 318, 905, 906, 907, 908</td>
+      <td>1km (13 minutes) from Flinders Street Station</td>
+    </tr>
+    <tr>
+      <td>Melbourne Central</td>
+      <td>None</td>
+      <td>Routes 1, 3, 3a, 5, 6, 16, 19, 30, 35, 57, 59, 64, 67, 72</td>
+      <td>Routes 250, 251, 200, 207, 302, 304, 305, 318, 905, 906, 907, 908</td>
+      <td>850m (11 minutes) from Flinders Street Station</td>
+    </tr>
+    <tr>
+      <td>Flagstaff</td>
+      <td>None</td>
+      <td>Routes, 30, 35 and 58</td>
+      <td>Route 605</td>
+      <td>1km (13 minutes) from Southern Cross Station</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that the official PTV webpages for <a href="https://www.ptv.vic.gov.au/disruptions/city-loop-closure/travelling-to-the-melbourne-central-precinct/">each of these stations</a> contain some errors, poor suggestions and confusing information.</p>
+
+<p>I would recommend instead looking at this <a href="https://www.ptv.vic.gov.au/assets/default-site/more/maps/metropolitan-local-area-maps/30_Melbourne_LAM_April-2022-NN.pdf">local area map for the Melbourne CBD</a> which shows all public transport options. You can see similar information on my public transport map of Melbourne <a href="http://melbournetransportmap.com/">here</a>.</p>
+
+<p>Hopefully this has been useful. I have provided links to all of the official information below as well to assist.</p>
+
+<ul>
+  <li><a href="https://www.ptv.vic.gov.au/disruptions/city-loop-closure/">Main City Loop closure webpage</a></li>
+  <li><a href="https://www.ptv.vic.gov.au/disruptions/city-loop-upgrades-planned-disruptions/">Other current City Loop disruptions</a></li>
+  <li><a href="https://www.metrotrains.com.au/planned-works/?pwId=505603">Metro Trains City Loop closure webpage</a></li>
+</ul>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Passenger information" /><category term="PTV" /><summary type="html"><![CDATA[If you are travelling to or around the city by train this month, you will want to know that the entire City Loop will be closed for two weeks from 9pm Monday 2 January to Sunday 15 January.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://philipmallis.com/wp-content/uploads/2023/01/e86b411a5952316c-1024x576.jpg" /><media:content medium="image" url="https://philipmallis.com/wp-content/uploads/2023/01/e86b411a5952316c-1024x576.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My train disruption experience, and how to make it better</title><link href="/blog/2022/12/05/my-train-disruption-experience-and-how-to-make-it-better" rel="alternate" type="text/html" title="My train disruption experience, and how to make it better" /><published>2022-12-05T19:00:00-06:00</published><updated>2022-12-05T19:00:00-06:00</updated><id>/blog/2022/12/05/my-train-disruption-experience-and-how-to-make-it-better</id><content type="html" xml:base="/blog/2022/12/05/my-train-disruption-experience-and-how-to-make-it-better"><![CDATA[<p>I don’t really like to use this blog for personal gripes. But every once in a while, something happens that brings me rushing back to my WordPress dashboard.</p>
+
+<h2 id="the-trip">The trip</h2>
+
+<p>A few weeks ago I had reason to head up the Hurstbridge Line on a social visit. I arrived at Jolimont Station to catch the 5:15pm Eltham train.</p>
+
+<p>After waiting for about 20 minutes, I noticed that the platform screen had been showing the next train arriving “in 2 minutes” for a lot longer than just 2 minutes. It then suddenly disappeared without explanation.</p>
+
+<p>There was no information about anything abnormal at the station. In the absence of this, I called PTV to see what was happening. The operator told me that the 5:15pm train would be arriving in 10 minutes or so and everything was fine. I asked her to double check because I hadn’t seen a train in a while, but she assured me that trains were running – it was just a bit late.</p>
+
+<p>Immediately after finishing the call, I checked the Metro Trains Twitter account which, funnily enough, <a href="https://twitter.com/metrotrains/status/1589140420331986944">had just tweeted</a> that a truck had hit the rail bridge on Elizabeth Street in North Richmond.</p>
+
+<figure class="wp-block-image size-full is-resized">![](https://philipmallis.com/wp-content/uploads/2022/11/mtmtwitter.png)</figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<p>Some Authorised Officers (AOs) had arrived on the platform for unrelated reasons, so I decided to ask them what was going on. They told me that trains were still running. Then one of them got a call saying that all trains on the Mernda/Hurstbridge Line were suspended and that it would be at least 40-50 minutes before an engineer could be brought out to inspect the bridge.</p>
+
+<p>At this point there were no Metro Trains staff that I could see, nothing showing on information screens and only one muffled announcement that I apparently missed because the only speaker on Platform 2 is located directly above its main entrance and I was standing a bit further down.</p>
+
+<p>The AOs advised me to find another way to continue my journey, which definitely seemed like a good idea given the 40-50 minute timeframe.</p>
+
+<p>So what other way was there?</p>
+
+<p>There is a stop for the Route 246 bus on Punt Road nearby. It’s about a 5-6 minute walk away. This bus runs parallel to the railway up to Clifton Hill. But I only just happen to know this because I’m a gunzel and a transport planner. There was no guidance from any official source, other than the Metro Trains Twitter account advising people to catch the Route 12 or 109 trams. This is useful if you’re trying to get to North Richmond from the CBD, but not for getting anywhere else along the Mernda/Hurstbridge Lines.</p>
+
+<p>I hopped on the 246 within a few minutes of arriving at the stop – which was luckily running late due to traffic. The journey north was fine. But what I saw at each bus stop outside the stations as we continued north was an increasing number of people waiting. About 20 people boarded at West and North Richmond, looking for an alternative route. Many of the other people at the bus stop were waiting for taxis, rideshare or other transport.</p>
+
+<figure class="wp-block-image size-large">![](https://philipmallis.com/wp-content/uploads/2022/11/IMG_20221106_173325_829-1024x576.jpg)</figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<p>As with my experience, none of the people who boarded had received any information on how to get to their destination. Overhearing this, I helped them out with their journey planning – asking them where they were going and offering suggestions. For example, a woman with her son and another couple were looking to get to Northcote near Dennis Station. I suggested the 246 to Clifton Hill Interchange and change to the Route 250 or 251 bus up Victoria Road. Another woman who boarded at Victoria Park wanted to get to the city – I suggested that she catch the 86 tram.</p>
+
+<p>But the true scale of the disruption wasn’t truly apparent until we approached Clifton Hill Station. The scene that greeted us as we passed by was crowds of hundreds of people on both sides of Hoddle Street waiting for taxis, rideshare, buses or whatever other alternative transport they could find. It was quite an incredible sight.</p>
+
+<figure class="wp-block-image size-large">![](https://philipmallis.com/wp-content/uploads/2022/11/IMG_20221106_174240_876-1024x576.jpg)</figure>
+<figure class="wp-block-image size-large">![](https://philipmallis.com/wp-content/uploads/2022/11/IMG_20221106_174244_729-1024x576.jpg)</figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<p>Of course, this was all exacerbated by the fact that there was a major cricket match being held at the MCG, with many patrons trying to get there by train. I can’t imagine that this experience would make many of them want to try public transport again next time.</p>
+
+<p>By this time, I was on the phone again to PTV to ask whether or not trains were running beyond Clifton Hill. If they were, I could get off the bus earlier to continue my journey. By this time, we were well into 30+ minutes of the disruption. There was no information on the PTV app or website and there had been no further updates or information on social media.</p>
+
+<p>The operator who took my call was very nice and tried her best to be helpful. But when I asked for this information, she told me that she wasn’t aware of any disruption. Her information showed a “good service” running on the Mernda/Hurstbridge Lines with no suspensions or delays. As a result, despite her best efforts, she was unable to help me. She offered to put me through to another area to put in a complaint, but this didn’t work properly and I was cut off. Again, not a great passenger experience.</p>
+
+<p>In the end trains began running again after about 30-35 minutes – with delays – and services began to slowly return to normal.</p>
+
+<h2 id="the-ways-to-fix-it">The ways to fix it</h2>
+
+<p>Disruptions happen. Things break. I entirely understand that. There are always things beyond the control of transport authorities and operators.</p>
+
+<p>But what <strong>is</strong> within their control is how disruptions are managed.</p>
+
+<p>The first, and easiest, thing to fix is providing information to passengers.</p>
+
+<p>Throughout this entire period, I never saw any disruption information on station platform screens. Departure times for the next train continued to count down but trains never arrived. The single announcement of which I was aware reached only some people on platforms, as the range and placement of speakers meant that you could only hear it if you were standing directly underneath them. As a result, only about two of the 25 people waiting at Jolimont actually heard anything.</p>
+
+<p>When I was on the 246 bus, the 20 or so people who I helped out only received that information because I happened to be there. If I wasn’t there, who knows when or if these people would have found a way, or if they would have just given up and waited for a taxi or rideshare to pick them up. This could have been easily avoided with clear and timely information provided by PTV/Metro Trains. This could have been in the form of platform announcements, station staff talking to passengers (where available), social media and on the PTV website/app.</p>
+
+<p>If anyone from PTV or Metro Trains is reading, here is another easy idea for you.</p>
+
+<p>Let’s have some prepared alternative transport information that is ready to go when disruptions happen. As there are only some places where trains can operate in sections, it would be easy to identify these options for each one. Then there could be some documentation that is ready to be published by station staff and through announcements, as well as on the PTV website, app and social media channels immediately when a disruption happens in one of these sections. This saves staff scrambling around trying to find this and significantly reduces the likelihood that incorrect or impractical information is published.</p>
+
+<p>This can also be used to have permanent posters with specific information. I’ve done a quick example below of what an improvement could look like in the form of posters at a station (which would be displayed in addition to the station maps, not as a substitute).</p>
+
+<figure class="wp-block-image size-large">[![](https://philipmallis.com/wp-content/uploads/2022/11/alternativetransportexample-1-724x1024.png)](https://philipmallis.com/wp-content/uploads/2022/11/alternativetransportexample-1.png)</figure>
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<p>Compare this to the new maps and disruption information boards that have been recently installed below.</p>
+
+<p><a href="https://www.flickr.com/photos/philipmallis/51962762922/" title="Footscray Station precinct map on Platform 5, Footscray"><img src="https://live.staticflickr.com/65535/51962762922_d229e97d83_c.jpg" alt="Footscray Station precinct map on Platform 5, Footscray" /></a><script async="" charset="utf-8" src="//embedr.flickr.com/assets/client-code.js"></script>&lt;div aria-hidden="true" class="wp-block-spacer" style="height:30px"&gt;&lt;/div&gt;Leaving aside the issues with the maps which I will leave for a separate post, see the small box in the bottom right hand corner euphemistically titled “Changes to your service”.</p>
+
+<p>This is a great illustration of one of the key issues. There is nothing here on how someone might find an alternative route on regular public transport. Even in a place like Footscray which has many feasible options, the only real information is for the location of train replacement buses. This may not be applicable in many situations (such as my example above) or even the best option for passengers.</p>
+
+<p>While it is certainly an improvement from the <a href="https://www.flickr.com/photos/philipmallis/51352425628/">older style maps</a> which usually just ignored regular buses entirely, these newer ones frankly don’t do much better. There are some better examples – <a href="https://www.flickr.com/photos/philipmallis/49053589722/">such as at Reservoir</a> – but these appear to be bespoke and not included at most stations. Plus, again, they aren’t very useful for helping people find alternative routes.</p>
+
+<h2 id="the-conclusion">The conclusion</h2>
+
+<p>As I said before, it is not unusual for things to disrupt public transport. In fact, we know with certainty that it will happen. When and where is another matter, but we can still get ready. For example, having pre-prepared content with alternative transport options for sections of each railway line that can be immediately shared would be incredibly useful. Not only would it be much quicker to get this information to passengers, but it eliminates or greatly reduces the possibility of publishing vague, incomplete or impractical advice (as has happened an <a href="https://twitter.com/yarratrams/status/1101366702951096320">unfortunate</a> <a href="https://twitter.com/bigbutchy21/status/1227713572551176192">number of times</a> in the past).</p>
+
+<p>Postscript: after writing this post I noticed a good example from PTV and Yarra Trams that illustrates part of my point. On <a href="https://www.ptv.vic.gov.au/disruptions/disruptions-information/article/route-3-3a-5-6-16-58-64-67-and-72-service-changes-from-3am-sunday-27-november-and-7am-saturday-17-december-2022">this page</a> describing disruptions to St Kilda Road trams, there is a comprehensive list of “Alternative travel” with train and bus routes. Leaving aside the page layout <a href="https://philipmallis.com/blog/2020/10/17/how-to-improve-ptv-disruption-information/" title="How to improve PTV disruption information">which is another story entirely</a>, this is great to see and should be done for every disruption.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Disruptions" /><category term="PTV" /><summary type="html"><![CDATA[I don’t really like to use this blog for personal gripes. But every once in a while, something happens that brings me rushing back to my WordPress dashboard.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://philipmallis.com/wp-content/uploads/2022/11/IMG_20221106_174244_729-1024x576.jpg" /><media:content medium="image" url="https://philipmallis.com/wp-content/uploads/2022/11/IMG_20221106_174244_729-1024x576.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">From Twitter to Mastodon: a guide for urbanists and gunzels</title><link href="/blog/2022/11/02/from-twitter-to-mastodon-a-guide-for-urbanists-and-gunzels" rel="alternate" type="text/html" title="From Twitter to Mastodon: a guide for urbanists and gunzels" /><published>2022-11-02T23:30:47-05:00</published><updated>2022-11-02T23:30:47-05:00</updated><id>/blog/2022/11/02/from-twitter-to-mastodon-a-guide-for-urbanists-and-gunzels</id><content type="html" xml:base="/blog/2022/11/02/from-twitter-to-mastodon-a-guide-for-urbanists-and-gunzels"><![CDATA[<p><strong>To skip to the list of accounts to follow, click <a href="https://philam.github.io/movetomastodon/">here</a></strong></p>
+
+<hr />
+
+<p>As of this morning I am the proud owner of a brand spanking new <a href="https://aus.social/web/@philip">Mastodon account</a>.</p>
+
+<p>It is something that I had been contemplating for a while as part of my general shift to free and open source software (FoSS). But recent events at Twitter have finally pushed me to take action on the social media front.</p>
+
+<h2 id="what-is-mastodon">What is Mastodon?</h2>
+
+<p>Mastodon is a free and open source <a href="https://en.wikipedia.org/wiki/Microblogging">microblogging</a> platform. Its concept is similar to Twitter but different in execution.</p>
+
+<p>While Twitter is a single corporation owned and controlled by a few people (<a href="https://www.theverge.com/2022/10/28/23428132/elon-musk-twitter-acquisition-problems-speech-moderation">most recently, just one</a>), Mastodon is a piece of software that is decentralised across thousands of different servers.</p>
+
+<p>Does this mean that each server operates separately? Well, not really.</p>
+
+<p>While each installation of Mastodon may have its own rules and policies, they are all part of the same platform. Users of any Mastodon server (or ‘Instance’) can follow, reply and otherwise interact with users of any other – provided that they are public ones of course.</p>
+
+<p>There is no background algorithm or other ways to manipulate what you do or see. Content is displayed chronologically with a lot of options to customise things as you wish.</p>
+
+<p>One final benefit is that it also gives you access to other <a href="https://jointhefedi.com">Fediverse</a> apps and websites. These include a range of software for alternatives to Youtube, Instagram and other closed-source social media. If you want to know more about this check out <a href="https://joinfediverse.wiki/What_is_the_Fediverse%3F">this page</a>.</p>
+
+<h2 id="how-do-i-join-mastodon">How do I join Mastodon?</h2>
+
+<p>Even as someone who had never really looked at Mastodon properly before this week, I found the process relatively easy.</p>
+
+<p>The first thing to do is select an Instance. You can do this by visiting this website which will help you choose. Otherwise the most common option is to join <a href="https://mastodon.social/explore">mastodon.social</a> – the largest one at the time of writing. If you’re in Australia you can sign up to <a href="https://aus.social/">aus.social</a> as an alternative (the one that I have joined).</p>
+
+<p>The important thing to note here is that it doesn’t really matter which one you choose. As I said before, you can interact with other users on any other Instance and you can even move to another one if you want. Just keep an eye on data privacy and social policies and you’ll be good to go.</p>
+
+<p>Once you pick an instance, it’s straightforward. Pick an email, account name and all of the other usual things.</p>
+
+<p>You will end up with a profile and home page – similar to Twitter – that you can customise as much or little as you want. The number of options to make it your own are much better than those on Twitter. For example, you can add custom links to your profile and add featured hashtags or accounts to the sidebar.</p>
+
+<p>The interface will look something like this:</p>
+
+<figure class="wp-block-image size-large">![](https://philipmallis.com/wp-content/uploads/2022/11/mastodonhome-1024x660.png)</figure>
+<h2 id="what-if-i-want-to-use-twitter">What if I want to use Twitter?</h2>
+
+<p>It’s entirely up to you how much, or if, you migrate over to Mastodon.</p>
+
+<p>While recent events have boosted user numbers, it is still just a small proportion of Twitter’s <a href="https://www.statista.com/statistics/303681/twitter-users-worldwide/">340 million</a>.</p>
+
+<p>I plan to use both Twitter and Mastodon for the time being. I am going to play around with a <a href="https://edtechfactotum.com/cross-posting-from-mastodon-to-twitter-using-ifttt-and-rss/">small script in IFTTT</a> that automatically posts between my accounts as well.</p>
+
+<h2 id="gunzel-city-and-similar-accounts-to-follow">Gunzel, city and similar accounts to follow</h2>
+
+<p>To help make the transition a bit easier, I have started a list of accounts that are related to various topics around transport, cities, planning, etc. that you may be interested in following.</p>
+
+<p><strong>I have created a Mastodon list here: <a href="https://philam.github.io/movetomastodon/">https://philam.github.io/movetomastodon/</a></strong></p>
+
+<p>These are not comprehensive and as more people make the journey across, I have no doubt that there will be many more. If you know of any I have missed, please let me know in the comments below or on the site;</p>]]></content><author><name>Philip</name></author><category term="Meta" /><category term="Social media" /><summary type="html"><![CDATA[To skip to the list of accounts to follow, click here]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://philipmallis.com/wp-content/uploads/2022/11/mastodonhome-1024x660.png" /><media:content medium="image" url="https://philipmallis.com/wp-content/uploads/2022/11/mastodonhome-1024x660.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Historical transport and planning documents now online</title><link href="/blog/2022/10/06/historical-transport-and-planning-documents-now-online" rel="alternate" type="text/html" title="Historical transport and planning documents now online" /><published>2022-10-06T01:12:44-05:00</published><updated>2022-10-06T01:12:44-05:00</updated><id>/blog/2022/10/06/historical-transport-and-planning-documents-now-online</id><content type="html" xml:base="/blog/2022/10/06/historical-transport-and-planning-documents-now-online"><![CDATA[<p><strong>Link here: <a href="https://philam.github.io/archive/">https://philam.github.io/archive/</a></strong></p>
+
+<p>When I was a planning student I discovered the treasure trove of the <a href="https://library.unimelb.edu.au/architecture">Architecture, Building and Planning Library</a>. Among other things, it’s full of historical reports, images and documents related to planning and transport.</p>
+
+<p>I spent many hours looking through these to find hidden gems that help to explain many aspects of Melbourne’s development.</p>
+
+<p>Unfortunately, most of these are not easily available. While the State Government, the Public Records Office and some other libraries may possess these documents, they have not been uploaded online anywhere that I can find.</p>
+
+<p>So I recently decided to help rectify this issue. This has involved taking photos of or scanning pages of these documents.</p>
+
+<p>I should emphasise that these are all public materials that are already released and freely available. No confidential or private information is being published.</p>
+
+<p>The documents will be progressively uploaded on a dedicated Github webpage <a href="https://philam.github.io/archive/">here</a>. It’s a bit basic at the moment but I will add a search function and other tweaks soon.</p>
+
+<p>The reports are available as PDF documents that I have also run through OCR, which means that the text should be searchable.</p>
+
+<p>So far the ones that I have uploaded are:</p>
+
+<ul>
+  <li>Metropolitan Strategy Implementation Plan 1981</li>
+  <li>Melbourne Transport 1985</li>
+  <li>MetPlan 1988</li>
+  <li>Southern Public Transport Link Feasibility Study 1991</li>
+  <li>Melbourne Transport Plan 1992</li>
+</ul>
+
+<p>I will add more as I find, scan and prepare them. Unfortunately, some previous library users have written notes in the margins or on the pages – rest assured this was not me.</p>
+
+<p>Hope they are useful!</p>]]></content><author><name>Philip</name></author><category term="History" /><category term="Planning" /><category term="Transport" /><summary type="html"><![CDATA[Link here: https://philam.github.io/archive/]]></summary></entry><entry><title type="html">Which are the least and most used stations in Victoria during COVID?</title><link href="/blog/2022/03/16/which-are-the-least-and-most-used-stations-in-victoria-during-covid" rel="alternate" type="text/html" title="Which are the least and most used stations in Victoria during COVID?" /><published>2022-03-16T20:00:00-05:00</published><updated>2022-03-16T20:00:00-05:00</updated><id>/blog/2022/03/16/which-are-the-least-and-most-used-stations-in-victoria-during-covid</id><content type="html" xml:base="/blog/2022/03/16/which-are-the-least-and-most-used-stations-in-victoria-during-covid"><![CDATA[<p>This follows on from my previous post asking this question for pre-COVID conditions.</p>
+
+<p>This second on the latest railway station patronage information will be using 2020-21 data, which is the latest available.</p>
+
+<h2 id="the-least-used-station-in-victoria-during-covid">The least used station in Victoria (during COVID)</h2>
+
+<p>As mentioned above, this uses 2020-21 data.</p>
+
+<p>Perhaps no surprise, as last time, that all of the ten least used stations in Victoria are in regional areas.</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Dingee | 250 | Swan Hill |
+| 2 | Talbot | 350 | Maryborough |
+| 3 | Creswick | 450 | Maryborough |
+| 4 | Springhurst | 600 | Albury |
+| 5 | Elmore | 600 | Echuca |
+| 6 | Avenel | 750 | Albury |
+| 7 | Clunes | 900 | Maryborough |
+| 8 | Chiltern | 1,000 | Albury |
+| 9 | Eaglehawk | 1,150 | Swan Hill |
+| 10 | Sherwood Park | 1,150 | Warrnambool |
+
+</figure>
+<p>Dingee takes out the title of the least used station in Victoria for 2020-21 once again with approximately 250 people for the year year. This is a less than one person per day.</p>
+
+<p>On the electrified metropolitan network, this was the picture in 2018-19 (excludes the Stony Point Line, which easily make up the ten by themselves, and Showgrounds/Flemington Racecourse as special event stations):</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Wattle Glen | 16,600 | Hurstbridge |
+| 2 | Tecoma | 30,300 | Belgrave |
+| 3 | Willison | 32,400 | Alamein |
+| 4 | Seaholme | 39,900 | Werribee |
+| 5 | Alamein | 46,350 | Alamein |
+| 6 | Hurstbridge | 50,350 | Hurstbridge |
+| 7 | Eaglemont | 50,550 | Hurstbridge |
+| 8 | Darebin | 53,850 | Hurstbridge |
+| 9 | Diggers Rest | 59,350 | Sunbury |
+| 10 | Upwey | 61,700 | Belgrave |
+
+</figure>
+<p>This is a similar picture to 2018-19. However, what I think is interesting is that Officer – normally a regular feature in these least used station lists – is not in the top ten. Diggers Rest and Eaglemont also feature here and not in 2018-19. This probably has something to do with commuting patterns and working from home.</p>
+
+<h2 id="the-most-used-station-in-victoria-during-covid">The most used station in Victoria (during COVID)</h2>
+
+<p>On the metropolitan network, these came up as the top ten in 2020-21:</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Flinders Street | 8,528,000 | Multiple |
+| 2 | Southern Cross | 4,556,450 | Multiple |
+| 3 | Melbourne Central | 4,206,700 | Multiple |
+| 4 | Parliament | 2,213,650 | Multiple |
+| 5 | Footscray | 2,056,000 | Multiple |
+| 6 | South Yarra | 1,669,900 | Multiple |
+| 7 | Flagstaff | 1,378,000 | Multiple |
+| 8 | Caulfield | 1,370,650 | Multiple |
+| 9 | Richmond | 1,292,650 | Multiple |
+| 10 | Box Hill | 1,192,700 | Belgrave/Lilydale |
+
+</figure>
+<p>Again, not many surprises here – Flinders Street easily takes the title of most used station in the state. The stations here are the same as 2018-19 with just some slight changes in order.</p>
+
+<p>The data notes indicate that interchanges within stations are not counted in these figures. The Southern Cross Station figure also excludes V/Line data from Platforms 1-8.</p>
+
+<p>For regional stations:</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Southern Cross | 2,033,750 | Multiple |
+| 2 | Tarneit | 593,000 | Geelong |
+| 3 | Wyndham Vale | 358,050 | Geelong |
+| 4 | Geelong | 336,000 | Geelong |
+| 5 | Melton | 326,100 | Ballarat |
+| 6 | Deer Park | 240,650 | Ballarat/Geelong |
+| 7 | Ballarat | 179,500 | Ballarat |
+| 8 | South Geelong | 162,000 | Geelong |
+| 9 | Bendigo | 157,700 | Bendigo |
+| 10 | Lara | 147,800 | Geelong |
+
+</figure>
+<p>As with the metropolitan network, this ranking is more or less the same. Deer Park and Wyndham Vale jumped up a few places, pushing more regional stations like Ballarat and Bendigo further down.</p>
+
+<h2 id="impacts-of-covid-19">Impacts of COVID-19</h2>
+
+<p>Since we’re talking about the COVID pandemic, let’s have a quick look at what it has done to patronage by station.</p>
+
+<p>Overall, the yearly patronage difference between 2018-19 and 2020-21 was a 66% decrease for the metropolitan network. By station, we can get a more granular picture of what’s happening. Here are the top ten largest declines (as a percentage) for stations in Melbourne on the metropolitan network:</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage difference 2018-19 to 2020-21 (yearly) | Line |
+|---|---|---|---|
+| 1 | Showgrounds | -98% | Flemington Racecourse |
+| 2 | Flemington Racecourse | -88% | Flemington Racecourse |
+| 3 | Coburg | -80% | Upfield |
+| 4 | Parliament | -78% | Multiple |
+| 5 | Aircraft | -77% | Werribee |
+| 6 | Southern Cross | -77% | Multiple |
+| 7 | Williams Landing | -77% | Werribee |
+| 8 | Moreland | -76% | Upfield |
+| 9 | East Malvern | -73% | Glen Waverley |
+| 10 | Diggers Rest | -73% | Sunbury |
+
+</figure>
+<p>There are a lot of interesting things going on here.</p>
+
+<p>The first two – Showgrounds and Flemington Racecourse – operate during special events. Obviously during COVID-19 restrictions, these events did not operate, or operated without spectators (e.g. the 2020 Melbourne Cup).</p>
+
+<p>Some of the stations on this list were affected by works and were partially or fully closed for long periods of time. Coburg and Moreland were closed as part of the Level Crossing Removal Project, as was Aircraft.</p>
+
+<p>Parliament was a bit of a surprise for me. Obviously the City Loop stations were seriously impacted by not having office workers commuting to the CBD for most of this year, but I did not expect it to be this significant. In total numbers, it’s almost eight million fewer people using the station than before COVID.</p>
+
+<p>This would also be the main reason why Southern Cross is also on this list, but not the only one. This station is also the main hub for regional trains, which would also account for the nearly 15 million fewer boardings than 2018-19.</p>
+
+<p>Finally, we have two odd ones out – East Malvern and Williams Landing. Neither of these stations serve activity centres and are primarily used for commuting which, for many people, was not happening during the pandemic.</p>
+
+<hr />
+
+<p>So that’s all for now! Stay tuned for future posts where I will interrogate these data, including tram stops. If you’re not already subscribed for updates, you can do so using your email address in the box on the right hand side.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Train" /><summary type="html"><![CDATA[This follows on from my previous post asking this question for pre-COVID conditions.]]></summary></entry><entry><title type="html">Which were the least and most used stations in Victoria before COVID?</title><link href="/blog/2022/03/09/which-were-the-least-and-most-used-stations-in-victoria-before-covid" rel="alternate" type="text/html" title="Which were the least and most used stations in Victoria before COVID?" /><published>2022-03-09T19:00:00-06:00</published><updated>2022-03-09T19:00:00-06:00</updated><id>/blog/2022/03/09/which-were-the-least-and-most-used-stations-in-victoria-before-covid</id><content type="html" xml:base="/blog/2022/03/09/which-were-the-least-and-most-used-stations-in-victoria-before-covid"><![CDATA[<p>This is a kind of update of a previous post that I did <a href="https://philipmallis.com/blog/2019/02/21/which-are-the-least-and-most-used-stations-in-victoria/" title="back in 2019">back in 2019</a> using 2016-17 patronage data.</p>
+
+<p>So since that post there’s been this little thing called a pandemic that’s been upon us for the past couple of years. Amongst other things, it’s caused significant variances in public transport use due to lockdowns, travel restrictions, working from home and many other things.</p>
+
+<p>As a result, I am going to answer this question on the least and most used stations in Victoria in two sections. The first will be using the last complete yearly data before COVID-19 hit us, i.e. 2018-19. The second will be using 2020-21 data, which is the latest available. I’ll do this in a separate post.</p>
+
+<h2 id="the-least-used-station-in-victoria-pre-covid">The least used station in Victoria (pre-COVID)</h2>
+
+<p>As mentioned above, this uses 2018-19 data.</p>
+
+<p>Perhaps no surprise, as last time, that all of the ten least used stations in Victoria are in regional areas.</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Dingee | 400 | Swan Hill |
+| 2 | Talbot | 1000 | Maryborough |
+| 3 | Elmore | 1200 | Echuca |
+| 4 | Creswick | 1350 | Maryborough |
+| 5 | Springhurst | 1500 | Albury |
+| 6 | Avenel | 1850 | Albury |
+| 7 | Sherwood Park | 1900 | Warrnambool |
+| 8 | Clunes | 2200 | Maryborough |
+| 9 | Rosedale | 2550 | Bairnsdale |
+| 10 | Eaglehawk | 2700 | Swan Hill |
+
+</figure>
+<p>Dingee takes out the title of the least used station in Victoria for 2018-19 with approximately 400 people per year. This is a little more than one person per day. In 2016-17, we had Elmore down as the least used station. However, for some reason, Dingee was not included in pre-2018 data, so it may also have been at this time too.</p>
+
+<p>On the electrified metropolitan network, this was the picture in 2018-19 (excludes the Stony Point Line, which easily make up the ten by themselves):</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Wattle Glen | 48,050 | Hurstbridge |
+| 2 | Tecoma | 75,650 | Belgrave |
+| 3 | Willison | 102,600 | Alamein |
+| 4 | Seaholme | 106,850 | Werribee |
+| 5 | Officer | 122,900 | Pakenham |
+| 6 | Hurstbridge | 123,150 | Hurstbridge |
+| 7 | Alamein | 145,700 | Alamein |
+| 8 | Darebin | 150,400 | Hurstbridge |
+| 9 | Upwey | 157,050 | Belgrave |
+| 10 | Rushall | 158,350 | Mernda |
+
+</figure>
+<p>This is a similar picture to 2016-17. Some of the changes are that Diggers Rest is no longer in the least used 10 (patronage shot up to 221,250), being replaced by Rushall. Officer has also risen from third least used to fifth least used with a significant increase in yearly patronage – likely due to suburban expansion in the area.</p>
+
+<h2 id="the-most-used-station-in-victoria-pre-covid">The most used station in Victoria (pre-COVID)</h2>
+
+<p>On the metropolitan network, these came up as the top ten in 2018-19:</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Flinders Street | 28,320,650 | Multiple |
+| 2 | Southern Cross | 19,551,450 | Multiple |
+| 3 | Melbourne Central | 15,250,700 | Multiple |
+| 4 | Parliament | 10,124,200 | Multiple |
+| 5 | Footscray | 5,332,950 | Multiple |
+| 6 | Flagstaff | 4,854,950 | Multiple |
+| 7 | South Yarra | 4,367,150 | Multiple |
+| 8 | Richmond | 4,227,000 | Multiple |
+| 9 | Caulfield | 4,175,050 | Multiple |
+| 10 | Box Hill | 3,685,500 | Belgrave/Lilydale |
+
+</figure>
+<p>Not many surprises here – Flinders Street easily takes the title of most used station in the state. The stations here are the same as 2016-17 with just some slight changes in order.</p>
+
+<p>The data notes indicate that interchanges within stations are not counted in these figures. The Southern Cross Station figure also excludes V/Line data from Platforms 1-8.</p>
+
+<p>For regional stations:</p>
+
+<figure class="wp-block-table is-style-stripes">| Rank | Station | Patronage (yearly) | Line |
+|---|---|---|---|
+| 1 | Southern Cross | 6,306,000 | Multiple |
+| 2 | Tarneit | 1,350,500 | Geelong |
+| 3 | Geelong | 844,050 | Geelong |
+| 4 | Melton | 827,850 | Ballarat |
+| 5 | Wyndham Vale | 786,100 | Geelong |
+| 6 | Ballarat | 624,050 | Ballarat |
+| 7 | South Geelong | 557,400 | Geelong |
+| 8 | Deer Park | 453,950 | Ballarat/Geelong |
+| 9 | Bendigo | 437,100 | Bendigo |
+| 10 | Lara | 383,900 | Geelong |
+
+</figure>
+<p>This one has quite a few more differences.</p>
+
+<p>The first thing to note is Tarneit Station, which has jumped from 887,566 in 2016-17 to 1,350,500 in just two years. This may be the first time that a non-interchange V/Line station in Victoria has cracked a million passengers (please correct me if I’m wrong).</p>
+
+<p>Other things to note are that Footscray has completely fallen off the charts from the 2016-17 data. I suspect this is because V/Line were previously including interchange data in their figures. Otherwise, the most used stations continue to be mostly located in major regional cities and growth areas in metropolitan Melbourne.</p>
+
+<hr />
+
+<p>So that’s all for now! Stay tuned for the next post which will answer the same questions, but using 2020-21 data, recorded during the COVID-19 pandemic. If you’re not already subscribed for updates, you can do so using your email address in the box on the right hand side.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Train" /><summary type="html"><![CDATA[This is a kind of update of a previous post that I did back in 2019 using 2016-17 patronage data.]]></summary></entry><entry><title type="html">Railway station and tram stop patronage in Victoria for 2008-2021</title><link href="/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021" rel="alternate" type="text/html" title="Railway station and tram stop patronage in Victoria for 2008-2021" /><published>2022-03-08T19:00:00-06:00</published><updated>2022-03-08T19:00:00-06:00</updated><id>/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021</id><content type="html" xml:base="/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021"><![CDATA[<p>Good news! The State Government has <a href="https://www.danielbowen.com/2022/03/03/vic-pt-patronage-data/">finally begun releasing</a> patronage data for <a href="https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries">railway</a> <a href="https://discover.data.vic.gov.au/dataset/annual-regional-train-patronage-station-entries">stations</a> and <a href="https://discover.data.vic.gov.au/dataset/annual-tram-stop-patronage">tram stops</a> in Victoria.</p>
+
+<p>I will do some separate posts analysing the data, but first I am publishing the data below for metropolitan and regional railway stations, as well as tram stops that have been released by the Department of Transport combined with my previous years of data collection:</p>
+
+<ul>
+  <li><a href="https://docs.google.com/spreadsheets/d/1r17nHKfPNSuB-2B3Knwv8QKcY4LVE20I/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Metropolitan railway station patronage 2008 – 2021</a></li>
+  <li><a href="https://docs.google.com/spreadsheets/d/1ZNfXV_HdEcnNAhLsM1CSCE82avMcxBYj/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Regional railway station patronage 2013 – 2021</a></li>
+  <li><a href="https://docs.google.com/spreadsheets/d/11IRid6oYA-9bVGFJgBWl4GNkhCPSCaz5/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Tram stop patronage 2018 – 2021</a></li>
+</ul>
+
+<h2 id="notes">Notes</h2>
+
+<p>For metropolitan and regional stations, I have combined these with the <a href="https://philipmallis.com/blog/2019/11/14/station-patronage-in-melbourne-for-2005-2019/" title="Station patronage in Melbourne for 2005-2019">previous data</a> that I obtained from the Department a few years ago. This gives a full overview of data from 2008 to 2021 (with two gaps in the middle due to lack of data collection). V/Line stats are also only available back to 2013 and do not include stations on the Overland.</p>
+
+<p>For tram stops, unfortunately the previous data published in about 2011 has been removed from the Data Vic website. As a result, there is no publicly available data prior to 2017 to compare. Yarra Trams or PTV have also changed some stop IDs and names. I’ve tried my best to account for these but it is almost impossible to determine in some case due to the limited data that is available to cross-reference.</p>
+
+<p>Unfortunately bus stop and bus route data has not been published at this time, making my data requests from 2019 (<a href="https://philipmallis.com/blog/2020/02/28/melbourne-bus-route-patronage-data-for-2008-2019/" title="Melbourne bus route patronage data for 2008 – 2019">bus routes</a> and <a href="https://maps.philipmallis.com/victorian-bus-stop-patronage/">bus stops</a>) the latest available as far as I know.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><summary type="html"><![CDATA[Good news! The State Government has finally begun releasing patronage data for railway stations and tram stops in Victoria.]]></summary></entry></feed>

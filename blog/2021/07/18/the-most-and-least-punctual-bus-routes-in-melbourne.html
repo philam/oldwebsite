@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The most and least punctual bus routes in Melbourne</title>
+  <meta name='description' content='Transport planner in Melbourne, Australia'>
+
+  <link rel="canonical" href="/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The most and least punctual bus routes in Melbourne – Philip Mallis">
+  <meta name="twitter:description" content="See the data here.
+">
+  <meta name="twitter:image:src" content="/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="The most and least punctual bus routes in Melbourne – Philip Mallis">
+  <meta property="og:description" content="See the data here.
+">
+  <meta property="og:image" content="/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '823095');
+</script>
+<!-- End MailerLite Universal -->
+
+<!-- Remark42 -->
+<script>
+        var remark_config = {
+            host: 'https://remark42.philipmallis.com',
+            site_id: 'remark42.philipmallis',
+        }
+        </script>
+
+        <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+<!-- End Remark42 -->
+
+<!-- Simple Search -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo.svg" alt="Philip Mallis">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/about/" class="nav__link">About</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/cv/" class="nav__link">CV</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/projects/" class="nav__link">Projects</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">Blog</a>
+                </li>
+                
+              
+
+            </ul>
+          </div>
+          <div class="nav-search-button">
+              <a href="../search" class="fa-solid fa-magnifying-glass"></a>
+          </div>
+          <!--bookshop-live name(social-link.jekyll.html) params() context() -->
+          
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://aus.social/@philip" target="_blank" rel="noopener" aria-label="fa-brands fa-mastodon icon"><i class="fa-brands fa-mastodon"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-youtube icon"><i class="fa-brands fa-youtube"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://flickr.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-flickr icon"><i class="fa-brands fa-flickr"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/philam" target="_blank" rel="noopener" aria-label="fa-brands fa-github icon"><i class="fa-brands fa-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="../feed.xml" target="_blank" rel="noopener" aria-label="fa-solid fa-rss icon"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+
+          <!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+
+    <div class="post-top">
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg" alt="The most and least punctual bus routes in Melbourne">
+        </div>
+      </div>
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/bus-data" class="post-tags__tag">Bus data</a>
+            
+              <a href="/tag/data" class="post-tags__tag">Data</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">The most and least punctual bus routes in Melbourne</h1>
+
+          <div class="post__meta">
+            <div class="post__author-image">
+              <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+            </div>
+
+            <div class="post__meta-bottom">
+              <div class="post__author">Philip Mallis</div>
+              <time class="post__date" datetime="2021-07-18T17:00:00-05:00">18 Jul 2021</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <p><em>See the data <a href="https://app.powerbi.com/view?r=eyJrIjoiMzE2ZDIyN2YtODY1Yy00ZGY0LWE4YTktNDcxOTcwYWQyMjM5IiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9">here</a>.</em></p>
+
+<p>On <a href="https://www.premier.vic.gov.au/new-public-data-reveals-high-performing-bus-network">Friday last week</a>, the Department of Transport added metropolitan bus performance data to its monthly public transport reporting. This is exciting news as it was not previously publicly available.</p>
+
+<figure class="wp-block-image size-full is-resized">![](https://philipmallis.com/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg)</figure>
+<p>The data is not very easy to find.</p>
+
+<p>To get there, you have to visit ptv.vic.gov.au, scroll to the bottom of the page, click on ‘Data and Reporting’, click on ‘<a href="https://www.ptv.vic.gov.au/footer/data-and-reporting/network-performance/monthly-performance/">Monthly performance</a>‘ and then scroll to nearly the bottom of the page to find a link buried in some text: “For detailed punctuality, reliability, and services monitored<a href="https://www.ptv.vic.gov.au/footer/data-and-reporting/network-performance/monthly-performance/#ServicesMonitored"><sup><em>(1)</em></sup></a> information, <a href="https://app.powerbi.com/view?r=eyJrIjoiMzE2ZDIyN2YtODY1Yy00ZGY0LWE4YTktNDcxOTcwYWQyMjM5IiwidCI6IjcyMmVhMGJlLTNlMWMtNGIxMS1hZDZmLTk0MDFkNjg1NmUyNCJ9">see our Power BI App</a>“</p>
+
+<p>There is a lot of information to digest in this Power BI table. Unfortunately, it’s not available to download, so the general public are quite limited in the type and scope of analysis that is practically possible. It is also only available back to July 2017.</p>
+
+<p>Despite these constraints, we can still pull out some interesting findings.</p>
+
+<h4 id="covid-19-has-significantly-improved-average-mean-bus-punctuality">COVID-19 has significantly improved average (mean) bus punctuality</h4>
+
+<p>In 2019, mean bus punctuality across the network was 86.8%. In 2020, this shot up by more than eight per cent to 92.9%.</p>
+
+<figure class="wp-block-image size-large">![](https://philipmallis.com/wp-content/uploads/2021/07/buspatronage.png)</figure>
+<hr />
+
+<p>This was likely due to the <a href="https://chartingtransport.com/2020/05/03/what-impact-has-the-2020-covid-19-pandemic-had-on-road-traffic-volumes-in-victoria/" title="https://chartingtransport.com/2020/05/03/what-impact-has-the-2020-covid-19-pandemic-had-on-road-traffic-volumes-in-victoria/">significant decrease</a> in motor vehicle traffic across Melbourne and Victoria throughout most of 2020 due to lockdown restrictions on movement. Less road traffic means fewer delays to buses caused by motor vehicles (crashes, congestion, etc.)</p>
+
+<p>Lower passenger numbers may have also played a part. This may have been by reducing the number of stops that buses needed to make and speeding up journey times.</p>
+
+<h4 id="buses-are-most-punctual-in-january-and-least-punctual-in-march">Buses are most punctual in January and least punctual in March</h4>
+
+<p>Under non-COVID conditions (looking at 2018-2019 data), mean bus punctuality across the network varied quite considerably between months.</p>
+
+<p>Moreover, if you look at it month-by-month, January had the highest percentage of on-time services. March had the lowest percentage of on-time services, closely followed by February.</p>
+
+<p>This is probably the impact of school holidays and the resulting decrease in motor vehicle traffic that usually causes delays to bus services.</p>
+
+<h4 id="the-best-performing-bus-routes-tend-to-be-very-short-and--or-infrequent">The best-performing bus routes tend to be very short and / or infrequent</h4>
+
+<p>Unfortunately I can’t link route length data to punctuality information as the Power BI tables cannot be downloaded. So this is more off my general observations rather than many hard stats.</p>
+
+<p>You can sort routes by punctuality, and it seems that those that perform the best are those with short routes or infrequent service patterns.</p>
+
+<figure class="wp-block-table is-style-stripes">| Route | % On Time (July 2017 – June 2021) | 2018-19 Patronage |
+|---|---|---|
+| 444 | 99.8% | N/A |
+| 786 | 98.8% | 2,630 |
+| 489 | 98.5% | 85,348 |
+| 550 | 98.5% | 58,054 |
+| 486 | 98.4% | 137,572 |
+| 673 | 98.3% | 3,768 |
+| 487 | 97.8% | 67,063 |
+| 570 | 97.8% | 202,371 |
+| 696 | 97.8% | 2,231 |
+| 454 | 97.7% | N/A |
+
+</figure>
+<hr />
+
+<p>The most punctual bus route, the 444, <a href="https://web.archive.org/web/20200320084725/https://www.premier.vic.gov.au/bus-boost-for-melton-rockbank-and-the-growing-west/">is a new one</a>, having only commenced services in November 2019. It also travels only a short distance from Rockbank Station into the Aintree Estate with only eight stops.</p>
+
+<p>Most of the rest have been around for quite a while longer but they all fall into one of the two categories mentioned earlier. The <a href="https://www.ptv.vic.gov.au/route/timetable/4663/786-rye-to-st-andrews-beach/#RoutePage:::datetime=2021-07-18T23%3A20%3A00.000Z&amp;direction_id=251&amp;stop_id=-1&amp;_auth=80619c3452fbe9ea11c487e2602aa8fef1a115ef6cd6c591dcc887fd57eaee1c">786</a>, for example, only operates six services on weekdays plus three on Saturdays and carries a <a href="https://philipmallis.com/blog/2020/02/28/melbourne-bus-route-patronage-data-for-2008-2019/">tiny number of passengers</a> (2,630 in 2018-19), while the 696 (running from Olinda to Monbulk) only carried 2,231 passengers in 2018-19 along its nine stops.</p>
+
+<p>Three of the top ten (489, 486 and 487) operate in Sunbury and are presumably less likely to be affected by motor vehicle delays due to the lower levels of traffic.</p>
+
+<p>The <a href="https://www.ptv.vic.gov.au/route/11118/570-thomastown-rmit-bundoora/">570</a> is an interesting one. My two thoughts on this are that it is a relatively short route and also passes directly past the Dyson’s bus depot in Bundoora, making it very quick and easy for buses to start or end their trips. If you have any other theories or ideas as to why this comes up as the eighth most-punctual bus route in Melbourne, please let me know in the comments below.</p>
+
+<figure class="wp-block-table is-style-stripes">| Route | % On Time (July 2017 – June 2021) | 2018-19 Patronage |
+|---|---|---|
+| 606 | 69.1% | 128,113 |
+| 182 | 70.9% | N/A |
+| 417 | 72.4% | 34,567 |
+| 219 | 73.8% | 335,909 |
+| 538 | 74.8% | 38,533 |
+| 546 | 75.4% | 206,071 |
+| 693 | 76.8% | 438,186 |
+| 795 | 77.2% | 13,673 |
+| 350 | 77.7% | 199,586 |
+| 232 | 79.2% | 180,196 |
+| 303 | 79.2% | 68,530 |
+
+</figure>
+<hr />
+
+<p>The top 10 least punctual routes are a bit more of a mixed bag. It includes a new route (182, which hasn’t been operating for even six months yet) and some old, well-established routes like the 219.</p>
+
+<p>It’s less clear to me why these particular routes are in the top 10, other than they all have significant lengths of their route on roads that get quite congested. Again if you have any ideas, please let me know in the comments.</p>
+
+<hr />
+
+<p>It’s important to remember how this data is compiled and presented. There are a lot of qualifications. For example, ‘on time’ is defined by DoT for buses as: <em>“Number of services arriving no more than 4 minutes and 59 seconds late and departing no more than 59 seconds early at timing points.”</em></p>
+
+<p>There is more information on this in the first three tabs of the Power BI dashboard if you are interested.</p>
+
+<p>I’ve barely scratched the surface for the potential of this great dataset. For example, I would love to link this data to others that include bus patronage, route length and number of stops to cross-tabulate and analyse this information. But as I mentioned above, this is impossible unless the data is able to be downloaded in a machine-readable format (at least as far as I’m aware).</p>
+
+<p>I may come back to this topic soon after I’ve had some more time to dig around and cross-reference to related datasets. I’m sure others will also be doing the same.</p>
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=The%20most%20and%20least%20punctual%20bus%20routes%20in%20Melbourne&url=/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Mastodon" rel="nofollow"><i class="fa-brand fa-mastodon"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne&amp;media=/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg&amp;description=The%20most%20and%20least%20punctual%20bus%20routes%20in%20Melbourne"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne&title=The%20most%20and%20least%20punctual%20bus%20routes%20in%20Melbourne&summary=&source=Philip%20Mallis"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/2021/04/28/a-funny-thing-happened-on-my-way-to-the-city">
+    <div class="prev__image">
+      <img loading="lazy" src="/wp-content/uploads/2020/10/Bfqrj6TCEAEZh4D.jpg" alt="The most and least punctual bus routes in Melbourne">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">A funny thing happened on my way to the city</h2>
+    </div>
+  </a>
+  
+
+  
+  <a class="post__next" href="/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Next post</span>
+      <h2 class="post__nav__title">Railway station and tram stop patronage in Victoria for 2008-2021</h2>
+    </div>
+    <div class="next__image">
+      <img loading="lazy" src="" alt="The most and least punctual bus routes in Melbourne">
+    </div>
+  </a>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- begin comments -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="disqus-inner">
+        <div id="disqus_thread" class="post__comments">
+            <h2>Comments</h2>
+            <div id="remark42"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<noscript>Please enable JavaScript to view the
+  <a href="https://remark42.com">comments powered by Remark42.</a>
+</noscript>
+<!-- end comments -->
+
+
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="">
+                
+                
+                  
+                    <a href="/tag/bus-data" class="section__link related-tag">See all<span> Bus data</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/bus-data" class="article__tag">Bus data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2020/07/23/where-are-the-busiest-bus-stops-in-melbourne">Where are the busiest bus stops in Melbourne?</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      Update 3:25pm 24/07/2020: It’s been brought to my attention that some of the figures below are incorrect due to an er...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2020-07-23T20:36:09-05:00">23 Jul 2020</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/data" class="article__tag">Data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2020/05/04/impact-of-covid-19-lockdown-on-cycling-in-melbourne-first-glance">Impact of COVID-19 lockdown on cycling in Melbourne &#8211; a first glance</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      Anyone who has been out on Melbourne’s street network or shared paths will have witnessed the explosion in the number...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2020-05-04T15:30:00-05:00">04 May 2020</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/bus-data" class="article__tag">Bus data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2020/02/27/melbourne-bus-route-patronage-data-for-2008-2019">Melbourne bus route patronage data for 2008 &#8211; 2019</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      Download and view the data here.
+
+The latest installment of my ongoing publication of transport data for Victoria is ...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2020-02-27T18:01:56-06:00">27 Feb 2020</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+<!--bookshop-live name(newsletter/newsletter.jekyll.html) params(newsletter_title=site.data.newsletter.newsletter_title
+  newsletter_description=site.data.newsletter.newsletter_description
+  newsletter_identifier=site.data.newsletter.newsletter_identifier
+  newsletter_button=site.data.newsletter.newsletter_button) context() -->
+          <!-- begin subscribe -->
+
+<section class="c-subscribe section">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="c-subscribe__inner">
+          <div class="c-subscribe__info">
+            <h3 class="c-subscribe__title">Join my mailing list</h3>
+            <div class="c-subscribe__subtitle">
+              <span id="ityped"></span>
+            </div>
+          </div>
+
+         <!-- <form class="c-subscribe__form validate" action="//"
+          </form> -->
+
+          <div class="ml-embedded" data-form="emL0Zk"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end subscribe -->
+
+<script>
+  var itype_text = ['Sign up below!'];
+</script>
+
+          <!--bookshop-live end-->
+
+
+    <!-- 
+        Bookshop components are accessed using the bookshop tag, 
+        using the same syntax as the standard Jekyll include tag.
+    -->
+    <!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+          
+          <!--bookshop-live end-->
+
+    <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live name(social-link.jekyll.html) params() context() -->
+          
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://aus.social/@philip" target="_blank" rel="noopener" aria-label="fa-brands fa-mastodon icon"><i class="fa-brands fa-mastodon"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-youtube icon"><i class="fa-brands fa-youtube"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://flickr.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-flickr icon"><i class="fa-brands fa-flickr"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/philam" target="_blank" rel="noopener" aria-label="fa-brands fa-github icon"><i class="fa-brands fa-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="../feed.xml" target="_blank" rel="noopener" aria-label="fa-solid fa-rss icon"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+
+          <!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">Home</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">About</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/cv/" class="footer_nav__link">CV</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/projects/" class="footer_nav__link">Projects</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">Blog</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2024 &copy; <a href="/">Philip Mallis</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p></div>
+      </div>
+    </div>
+</footer>
+<!-- end footer -->
+
+
+    <!--
+        load the live component for CloudCannon live previews.
+    -->
+    <script>
+(function(){
+  const bookshopLiveSetup = (CloudCannon) => {
+    CloudCannon.enableEvents();
+
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.src = `/_cloudcannon/bookshop-live.js`;
+    script.onload = function() {
+      window.bookshopLive = new window.BookshopLive({
+        remoteGlobals: ['/_cloudcannon/bookshop-site-data.json']
+      });
+      const updateBookshopLive = async () => {
+        const frontMatter = await CloudCannon.value();
+        const options = window.bookshopLiveOptions || {};
+        await window.bookshopLive.update({page: frontMatter}, options);
+        CloudCannon?.refreshInterface?.();
+      }
+      document.addEventListener('cloudcannon:update', updateBookshopLive);
+      updateBookshopLive();
+    }
+    head.appendChild(script);
+  }
+
+  document.addEventListener('cloudcannon:load', function (e) {
+    bookshopLiveSetup(e.detail.CloudCannon);
+  });
+})();
+</script>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>

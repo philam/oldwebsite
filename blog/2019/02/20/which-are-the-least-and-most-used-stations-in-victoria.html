@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Which are the least and most used stations in Victoria?</title>
+  <meta name='description' content='Transport planner in Melbourne, Australia'>
+
+  <link rel="canonical" href="/blog/2019/02/20/which-are-the-least-and-most-used-stations-in-victoria">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Which are the least and most used stations in Victoria? – Philip Mallis">
+  <meta name="twitter:description" content="As mentioned in a previous post, I recently acquired station patronage data for Melbourne and Victoria for 2013 to 2018.
+">
+  <meta name="twitter:image:src" content="">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="Which are the least and most used stations in Victoria? – Philip Mallis">
+  <meta property="og:description" content="As mentioned in a previous post, I recently acquired station patronage data for Melbourne and Victoria for 2013 to 2018.
+">
+  <meta property="og:image" content="">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '823095');
+</script>
+<!-- End MailerLite Universal -->
+
+<!-- Remark42 -->
+<script>
+        var remark_config = {
+            host: 'https://remark42.philipmallis.com',
+            site_id: 'remark42.philipmallis',
+        }
+        </script>
+
+        <script>!function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);</script>
+<!-- End Remark42 -->
+
+<!-- Simple Search -->
+<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+
+
+<body>
+
+    
+
+    <!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            <img class="logo__image" src="/images/logo.svg" alt="Philip Mallis">
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+              <ul class="nav__list list-reset">
+
+              
+                
+                <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/about/" class="nav__link">About</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/cv/" class="nav__link">CV</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/projects/" class="nav__link">Projects</a>
+                </li>
+                
+              
+                
+                <li class="nav__item">
+                  <a href="/blog/" class="nav__link">Blog</a>
+                </li>
+                
+              
+
+            </ul>
+          </div>
+          <div class="nav-search-button">
+              <a href="../search" class="fa-solid fa-magnifying-glass"></a>
+          </div>
+          <!--bookshop-live name(social-link.jekyll.html) params() context() -->
+          
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://aus.social/@philip" target="_blank" rel="noopener" aria-label="fa-brands fa-mastodon icon"><i class="fa-brands fa-mastodon"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-youtube icon"><i class="fa-brands fa-youtube"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://flickr.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-flickr icon"><i class="fa-brands fa-flickr"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/philam" target="_blank" rel="noopener" aria-label="fa-brands fa-github icon"><i class="fa-brands fa-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="../feed.xml" target="_blank" rel="noopener" aria-label="fa-solid fa-rss icon"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+
+          <!--bookshop-live end-->
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+
+    <div class="post-top">
+  <div class="container">
+    <div class="row">
+
+      
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          
+          <div class="post-tags">
+            
+              <a href="/tag/data" class="post-tags__tag">Data</a>
+            
+          </div>
+          
+
+
+          <h1 class="post__title">Which are the least and most used stations in Victoria?</h1>
+
+          <div class="post__meta">
+            <div class="post__author-image">
+              <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+            </div>
+
+            <div class="post__meta-bottom">
+              <div class="post__author">Philip Mallis</div>
+              <time class="post__date" datetime="2019-02-20T14:00:17-06:00">20 Feb 2019</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <p>As mentioned in <a href="https://philipmallis.com/blog/2019/02/14/station-patronage-in-victoria-2013-2018/">a previous post</a>, I recently acquired station patronage data for Melbourne and Victoria for 2013 to 2018.</p>
+
+<p>This means that we can now play with the data!</p>
+
+<p>One of the first questions that comes up when looking at station usage data is which stations are have the highest and lowest numbers of passengers.</p>
+
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<h3 id="which-is-the-least-used-station-in-victoria">Which is the least used station in Victoria?</h3>
+
+<p>It should come as no surprise that the 10 least used stations in the state are all in regional/country Victoria:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Patronage (yearly)</th>
+      <th>Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Elmore</td>
+      <td>884</td>
+      <td>Echuca</td>
+    </tr>
+    <tr>
+      <td>Talbot</td>
+      <td>1,121</td>
+      <td>Maryborough</td>
+    </tr>
+    <tr>
+      <td>Creswick</td>
+      <td>1,143</td>
+      <td>Maryborough</td>
+    </tr>
+    <tr>
+      <td>Springhurst</td>
+      <td>1,566</td>
+      <td>Albury</td>
+    </tr>
+    <tr>
+      <td>Essendon</td>
+      <td>1,645</td>
+      <td>Seymour</td>
+    </tr>
+    <tr>
+      <td>Sherwood Park</td>
+      <td>1,814</td>
+      <td>Warrnambool</td>
+    </tr>
+    <tr>
+      <td>Avenel</td>
+      <td>2,118</td>
+      <td>Albury</td>
+    </tr>
+    <tr>
+      <td>Clunes</td>
+      <td>2,136</td>
+      <td>Maryborough</td>
+    </tr>
+    <tr>
+      <td>Berwick</td>
+      <td>2,140</td>
+      <td>Traralgon</td>
+    </tr>
+    <tr>
+      <td>Pyramid</td>
+      <td>2,670</td>
+      <td>Swan Hill</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Elmore takes out the title of being the least used station in Victoria for 2016-17 with 884 recorded boardings – that’s just 2.42 people per day! However, if you look at the data in previous years, it was previously hovering in around seventh place. I don’t know why it was particularly low in 2016-17 – it might be a data error or perhaps a local disruption. If any locals could enlighten us please let me know in the comments below!</p>
+
+<p>On the metropolitan network, there are few surprises in the least used station data.</p>
+
+<p>All nine stations on the Stony Point Line almost entirely comprise the list of ten least used stations on the metropolitan network.</p>
+
+<p>For the purposes of the table below, I have excluded them and begun with the least-used station on the electrified network instead:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Patronage (yearly)</th>
+      <th>Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Wattle Glen</td>
+      <td>52,664</td>
+      <td>Hurstbridge</td>
+    </tr>
+    <tr>
+      <td>Tecoma</td>
+      <td>56,636</td>
+      <td>Belgrave</td>
+    </tr>
+    <tr>
+      <td>Officer</td>
+      <td>75,877</td>
+      <td>Pakenham</td>
+    </tr>
+    <tr>
+      <td>Willison</td>
+      <td>97,248</td>
+      <td>Alamein</td>
+    </tr>
+    <tr>
+      <td>Seaholme</td>
+      <td>103,446</td>
+      <td>Werribee</td>
+    </tr>
+    <tr>
+      <td>Upwey</td>
+      <td>125,371</td>
+      <td>Belgrave</td>
+    </tr>
+    <tr>
+      <td>Alamein</td>
+      <td>133,093</td>
+      <td>Alamein</td>
+    </tr>
+    <tr>
+      <td>Hurstbridge</td>
+      <td>140,518</td>
+      <td>Hurstbridge</td>
+    </tr>
+    <tr>
+      <td>Diggers Rest</td>
+      <td>142,198</td>
+      <td>Sunbury</td>
+    </tr>
+    <tr>
+      <td>Darebin</td>
+      <td>145,776</td>
+      <td>Hurstbridge</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Wattle Glen comes out as the least used station on the metropolitan electrified network for 2016-17 with 52,664 passengers (143.89 per day).</p>
+
+<p>Including the Stony Point Line, Baxter comes out as the least used with 4,696 yearly passengers (12.83 per day).</p>
+
+<p>In many previous years, up until about 2013-14, Wattle Glen was second to Officer as the least used station in Melbourne (excluding the Stony Point Line). Due to the rapid growth in that area, Officer’s patronage has increased from 21,479 in 2008-09 to 91,956 in 2017-18.</p>
+
+<p>A note on this metropolitan data – I have 2017-18 data as well but have opted to only include the 2016-17 data in this post. This is to ensure accurate comparison with V/Line data which only goes up to 2016-17.</p>
+
+<div aria-hidden="true" class="wp-block-spacer" style="height:30px"></div>
+<h3 id="which-is-the-most-used-station-in-victoria">Which is the most used station in Victoria?</h3>
+
+<p>Once again, we will start with the V/Line statistics.</p>
+
+<p>Unsurprisingly, Southern Cross Station is by far the most used station on the regional train network with 6,612,020 passengers per year (2016-17).</p>
+
+<p>However, some of the other most used stations may surprise you:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Patronage (yearly) - V/Line only</th>
+      <th>Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Southern Cross</td>
+      <td>6,612,020</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Tarneit</td>
+      <td>887,566</td>
+      <td>Geelong</td>
+    </tr>
+    <tr>
+      <td>Melton</td>
+      <td>726,339</td>
+      <td>Ballarat</td>
+    </tr>
+    <tr>
+      <td>Geelong</td>
+      <td>716,314</td>
+      <td>Geelong</td>
+    </tr>
+    <tr>
+      <td>Footscray</td>
+      <td>636,013</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Ballarat</td>
+      <td>604,115</td>
+      <td>Ballarat</td>
+    </tr>
+    <tr>
+      <td>Wyndham Vale</td>
+      <td>541,400</td>
+      <td>Geelong</td>
+    </tr>
+    <tr>
+      <td>South Geelong</td>
+      <td>527,263</td>
+      <td>Geelong</td>
+    </tr>
+    <tr>
+      <td>Bendigo</td>
+      <td>407,417</td>
+      <td>Bendigo</td>
+    </tr>
+    <tr>
+      <td>Lara</td>
+      <td>320,915</td>
+      <td>Geelong</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For metropolitan Melbourne, the numbers get much higher. Again unsurprisingly, Flinders Street Station comes out on top with 27,859,333 passengers per year (2016-17):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Station</th>
+      <th>Patronage (yearly) - V/Line only</th>
+      <th>Line</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Flinders Street</td>
+      <td>27,859,333</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Southern Cross</td>
+      <td>17,470,740</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Melbourne Central</td>
+      <td>15,724,183</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Parliament</td>
+      <td>9,855,426</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Footscray</td>
+      <td>5,100,122</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Flagstaff</td>
+      <td>4,645,648</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Caulfield</td>
+      <td>4,544,747</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>South Yarra</td>
+      <td>4,517,462</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Richmond</td>
+      <td>3,803,562</td>
+      <td>Multiple</td>
+    </tr>
+    <tr>
+      <td>Box Hill</td>
+      <td>3,769,046</td>
+      <td>Belgrave/Lilydale</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It’s interesting that Box Hill makes it into the top 10 most used stations as it is not an interchange between rail lines. However, it does have a <a href="https://www.flickr.com/photos/philipmallis/37102948812/">large bus interchange</a> with frequent services from all directions. According to the latest station access statistics, 2,931 people (26.2 percent) use a bus to get to Box Hill Station every day. This is the second highest in Melbourne – only behind Huntingdale.</p>
+
+<h3 id="data-notes">Data notes</h3>
+
+<p>I will qualify the analysis above with a few notes.</p>
+
+<p>The metropolitan station data include all station entrances and exits – including V/Line and interstate passengers where applicable. The V/Line data is regional passengers only.</p>
+
+<p>This data also does not take into account passengers interchanging (particularly at places like Richmond), staff opening myki gates during disruptions, fare evasion or other irregularities. The gate configuration at Caulfield also leads to an overestimate of patronage, as with previous numbers.</p>
+
+<p>Other notes and details on data collection may be found in the original spreadsheets, available <a href="https://philipmallis.com/blog/2019/02/14/station-patronage-in-victoria-2013-2018/">here</a>.</p>
+
+    </div>
+
+    <div class="post__share">
+  <div class="share__head">
+    <div class="share__title">Share this Post</div>
+  </div>
+  <ul class="share__list list-reset">
+    <li class="share__item">
+      <a class="share__link share__twitter"
+        href="https://twitter.com/intent/tweet?text=Which%20are%20the%20least%20and%20most%20used%20stations%20in%20Victoria?&url=/blog/2019/02/20/which-are-the-least-and-most-used-stations-in-victoria"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Mastodon" rel="nofollow"><i class="fa-brand fa-mastodon"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u=/blog/2019/02/20/which-are-the-least-and-most-used-stations-in-victoria"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__pinterest"
+        href="http://pinterest.com/pin/create/button/?url=/blog/2019/02/20/which-are-the-least-and-most-used-stations-in-victoria&amp;media=&amp;description=Which%20are%20the%20least%20and%20most%20used%20stations%20in%20Victoria?"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=900,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on Pinterest" rel="nofollow"><i class="ion ion-logo-pinterest"></i></a>
+    </li>
+    <li class="share__item">
+      <a class="share__link share__linkedin"
+        href="https://www.linkedin.com/shareArticle?mini=true&url=/blog/2019/02/20/which-are-the-least-and-most-used-stations-in-victoria&title=Which%20are%20the%20least%20and%20most%20used%20stations%20in%20Victoria?&summary=&source=Philip%20Mallis"
+        onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+        title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+    </li>
+  </ul>
+</div>
+
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      <div class="post__navigation animate">
+  
+  <a class="post__prev" href="/blog/2019/02/13/station-patronage-in-victoria-2013-2018">
+    <div class="prev__image">
+      <img loading="lazy" src="" alt="Which are the least and most used stations in Victoria?">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">Station patronage in Victoria for 2013-2018</h2>
+    </div>
+  </a>
+  
+
+  
+  <a class="post__next" href="/blog/2019/02/27/the-fastest-way-to-get-from-the-city-to-la-trobe-university">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Next post</span>
+      <h2 class="post__nav__title">The fastest way to get from the city to La Trobe University</h2>
+    </div>
+    <div class="next__image">
+      <img loading="lazy" src="" alt="Which are the least and most used stations in Victoria?">
+    </div>
+  </a>
+  
+</div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- begin comments -->
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="disqus-inner">
+        <div id="disqus_thread" class="post__comments">
+            <h2>Comments</h2>
+            <div id="remark42"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<noscript>Please enable JavaScript to view the
+  <a href="https://remark42.com">comments powered by Remark42.</a>
+</noscript>
+<!-- end comments -->
+
+
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="">
+                
+                
+                  
+                    <a href="/tag/data" class="section__link related-tag">See all<span> Data</span> <i class="ion ion-md-arrow-forward"></i></a>
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+                  <div class="image-wrap">
+                    <a class="article__image" href="/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne">
+                      <img loading="lazy" src="/wp-content/uploads/2021/07/50284007992_e0c8320790_c.jpg" alt="The most and least punctual bus routes in Melbourne">
+                    </a>
+                  </div>
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/bus-data" class="article__tag">Bus data</a>
+                      
+                      <a href="/tag/data" class="article__tag">Data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2021/07/18/the-most-and-least-punctual-bus-routes-in-melbourne">The most and least punctual bus routes in Melbourne</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      *See the data [here](https://app.powerbi.com/view?r=eyJrIjoiMzE2ZDIyN2YtODY1Yy00ZGY0LWE4YTktNDcxOTcwYWQyMjM5IiwidCI6I...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2021-07-18T17:00:00-05:00">18 Jul 2021</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/data" class="article__tag">Data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2020/05/04/impact-of-covid-19-lockdown-on-cycling-in-melbourne-first-glance">Impact of COVID-19 lockdown on cycling in Melbourne &#8211; a first glance</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      Anyone who has been out on Melbourne’s street network or shared paths will have witnessed the explosion in the number...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2020-05-04T15:30:00-05:00">04 May 2020</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+                <div class="article__inner">
+              
+                  
+              
+                  <div class="article__content">
+              
+                    
+                    <div class="article-tags__box">
+                      
+                      <a href="/tag/bus" class="article__tag">Bus</a>
+                      
+                      <a href="/tag/data" class="article__tag">Data</a>
+                      
+                    </div>
+                    
+              
+                    <h2 class="article__title">
+                      <a href="/blog/2019/04/04/melbourne-bus-patronage-data-2008-2017">Melbourne bus patronage data 2008 &#8211; 2017</a>
+                    </h2>
+              
+                    <p class="article__excerpt">
+                      *Download the data [here](https://drive.google.com/file/d/1rf0B74BxwkBedQ8RExe0W0r5Rto6_7cu/view?usp=sharing). Update...
+                    </p>
+              
+                    <div class="article__meta">
+                      <div class="article__author-image">
+                        <img loading="lazy" src="/images/avatar.jpg" alt="Philip Mallis">
+                      </div>
+                      <div class="article-info">
+                        <div class="article__author-name">Philip Mallis</div>
+                        <span class="article__date"><time datetime="2019-04-04T14:58:42-05:00">04 Apr 2019</time></span>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+
+            
+                
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+<!--bookshop-live name(newsletter/newsletter.jekyll.html) params(newsletter_title=site.data.newsletter.newsletter_title
+  newsletter_description=site.data.newsletter.newsletter_description
+  newsletter_identifier=site.data.newsletter.newsletter_identifier
+  newsletter_button=site.data.newsletter.newsletter_button) context() -->
+          <!-- begin subscribe -->
+
+<section class="c-subscribe section">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="c-subscribe__inner">
+          <div class="c-subscribe__info">
+            <h3 class="c-subscribe__title">Join my mailing list</h3>
+            <div class="c-subscribe__subtitle">
+              <span id="ityped"></span>
+            </div>
+          </div>
+
+         <!-- <form class="c-subscribe__form validate" action="//"
+          </form> -->
+
+          <div class="ml-embedded" data-form="emL0Zk"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end subscribe -->
+
+<script>
+  var itype_text = ['Sign up below!'];
+</script>
+
+          <!--bookshop-live end-->
+
+
+    <!-- 
+        Bookshop components are accessed using the bookshop tag, 
+        using the same syntax as the standard Jekyll include tag.
+    -->
+    <!--bookshop-live name(page.jekyll.html) params(content_blocks=page.content_blocks page_theme=page.page_theme) context() -->
+          
+          <!--bookshop-live end-->
+
+    <div class="top" title="Top"><i class="fa-solid fa-arrow-up"></i></div>
+
+    <!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <!--bookshop-live name(social-link.jekyll.html) params() context() -->
+          
+<div class="social">
+  <ul class="social__list list-reset">
+    
+    <li class="social__item">
+      <a class="social__link" href="https://aus.social/@philip" target="_blank" rel="noopener" aria-label="fa-brands fa-mastodon icon"><i class="fa-brands fa-mastodon"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://youtube.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-youtube icon"><i class="fa-brands fa-youtube"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://flickr.com/philipmallis" target="_blank" rel="noopener" aria-label="fa-brands fa-flickr icon"><i class="fa-brands fa-flickr"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="https://github.com/philam" target="_blank" rel="noopener" aria-label="fa-brands fa-github icon"><i class="fa-brands fa-github"></i></a>
+    </li>
+    
+    <li class="social__item">
+      <a class="social__link" href="../feed.xml" target="_blank" rel="noopener" aria-label="fa-solid fa-rss icon"><i class="fa-solid fa-rss"></i></a>
+    </li>
+    
+  </ul>
+</div>
+
+
+          <!--bookshop-live end-->
+
+        <ul class="footer_nav list-reset">
+          
+          <li class="footer_nav__item">
+            <a href="/" class="footer_nav__link">Home</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/about/" class="footer_nav__link">About</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/cv/" class="footer_nav__link">CV</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/projects/" class="footer_nav__link">Projects</a>
+          </li>
+          
+          <li class="footer_nav__item">
+            <a href="/blog/" class="footer_nav__link">Blog</a>
+          </li>
+          
+        </ul>
+
+        <div class="copyright"><p> 2024 &copy; <a href="/">Philip Mallis</a>. Template by <a href="https://cloudcannon.com/">CloudCannon</a>.</p></div>
+      </div>
+    </div>
+</footer>
+<!-- end footer -->
+
+
+    <!--
+        load the live component for CloudCannon live previews.
+    -->
+    <script>
+(function(){
+  const bookshopLiveSetup = (CloudCannon) => {
+    CloudCannon.enableEvents();
+
+    const head = document.querySelector('head');
+    const script = document.createElement('script');
+    script.src = `/_cloudcannon/bookshop-live.js`;
+    script.onload = function() {
+      window.bookshopLive = new window.BookshopLive({
+        remoteGlobals: ['/_cloudcannon/bookshop-site-data.json']
+      });
+      const updateBookshopLive = async () => {
+        const frontMatter = await CloudCannon.value();
+        const options = window.bookshopLiveOptions || {};
+        await window.bookshopLive.update({page: frontMatter}, options);
+        CloudCannon?.refreshInterface?.();
+      }
+      document.addEventListener('cloudcannon:update', updateBookshopLive);
+      updateBookshopLive();
+    }
+    head.appendChild(script);
+  }
+
+  document.addEventListener('cloudcannon:load', function (e) {
+    bookshopLiveSetup(e.detail.CloudCannon);
+  });
+})();
+</script>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/common.js"></script>
+</body>
+</html>
