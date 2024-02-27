@@ -15,12 +15,12 @@ permissions:
   id-token: write
 
 jobs:
-  # Build job
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout 🛎️
-      uses: actions/checkout@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
