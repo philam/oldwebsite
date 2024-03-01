@@ -1,5 +1,7 @@
 title: Philip Mallis
 
+url: "https://newsite.philipmallis.com"
+
 plugins:
   - jekyll-bookshop
   - cloudcannon-jekyll-bookshop
