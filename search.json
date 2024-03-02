@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "A farewell to Wordpress",
+      "category" : "",
+      "tags"     : "Meta",
+      "url"      : "/blog/2024/03/02/new-website-from-wordpress-to-jekyll",
+      "date"     : "2024-03-02 04:02:21 -0600"
+    } ,
+  
+    {
       "title"    : "How to export Flickr photos with metadata attached",
       "category" : "",
       "tags"     : "Flickr",

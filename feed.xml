@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://newsite.philipmallis.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://newsite.philipmallis.com/" rel="alternate" type="text/html" /><updated>2024-03-02T05:20:53-06:00</updated><id>https://newsite.philipmallis.com/feed.xml</id><title type="html">Philip Mallis</title><entry><title type="html">How to export Flickr photos with metadata attached</title><link href="https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached" rel="alternate" type="text/html" title="How to export Flickr photos with metadata attached" /><published>2023-09-11T00:02:21-05:00</published><updated>2023-09-11T00:02:21-05:00</updated><id>https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached</id><content type="html" xml:base="https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached"><![CDATA[<p>I have been a user of Flickr for about eight years. While I have no plans to move away, there are many reasons why someone would want to export their photos and videos.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://newsite.philipmallis.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://newsite.philipmallis.com/" rel="alternate" type="text/html" /><updated>2024-03-02T05:34:03-06:00</updated><id>https://newsite.philipmallis.com/feed.xml</id><title type="html">Philip Mallis</title><entry><title type="html">A farewell to Wordpress</title><link href="https://newsite.philipmallis.com/blog/2024/03/02/new-website-from-wordpress-to-jekyll" rel="alternate" type="text/html" title="A farewell to Wordpress" /><published>2024-03-02T04:02:21-06:00</published><updated>2024-03-02T04:02:21-06:00</updated><id>https://newsite.philipmallis.com/blog/2024/03/02/new-website-from-wordpress-to-jekyll</id><content type="html" xml:base="https://newsite.philipmallis.com/blog/2024/03/02/new-website-from-wordpress-to-jekyll"><![CDATA[<p>It’s hard to say goodbye sometimes.</p>
+
+<p>I have been running a personal website since my council election campaign 14 years ago in February 2012. I started on WordPress at the time - back in <a href="https://wordpress.org/documentation/wordpress-version/version-3-3/">Version 3.3</a> when it looked like this:</p>
+
+<p><img src="/images/posts/wordpress-3-3-2.jpeg" alt="Screenshot of a dashboard of Wordpress 3.3" /></p>
+
+<p>As a non-developer this was a steep learning curve at the time. I knew nothing about DNS, web hosting or HTML. Over these years I have slowly taught myself some basic skills; although I’d say that I’m still very much a novice.</p>
+
+<p>After all this time I recently decided that it was time for a change.</p>
+
+<p>The reasons for this are partly because WordPress has changed and partly because I want to try something new.</p>
+
+<p>For a personal website where the main aim is to present information and host blog posts, WordPress is now overkill. At the time when I started in 2012 it was ‘‘the’’ place to start. It was easy to set up, lightweight and a breeze to write.</p>
+
+<p>Now I find it too bloated and even slightly annoying to use. Its installation is still very easy and it deserves a lot of credit. But the Gutenberg Editor has never really grown on me and I found that I was having to stack more and more plugins on top of each other to get my website to do what I wanted.</p>
+
+<p>And so I started researching alternatives in late 2023 which eventually led me to find <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<p>It’s a static site generator that has been around for a while and is lightweight.</p>
+
+<p>These two factors are the main ones that attracted me. Ideally I do not want a database to host a basic website and a long history also means a higher likelihood of a strong user base and better documentation.</p>
+
+<p>This isn’t to say that Jekyll is necessarily the best answer for what I want. It’s just the one that I have gone with because I have found it the easiest to get my head around. Even then there are still things that I don’t fully understand or have spent a long time trying to figure out.</p>
+
+<p>I am hosting Jekyll on <a href="https://pages.github.com/">Github Pages</a>. This is proving complicated because the theme here relies on Gems and dependencies that Github does not natively support in Safe Mode. This means there is a workaround using Github Actions and some other <a href="https://github.com/CloudCannon/vonge-jekyll-bookshop-template/issues/22">tenuous trickery</a> that works but in a very roundabout way. I’m not very happy with it and hopefully a better solution comes up.</p>
+
+<p>For completeness I am using:</p>
+
+<ul>
+    <li><a href="https://remark42.com/">Remark42</a> for the comments system (if I can get the import function to work)</li>
+    <li><a href="https://www.mailerlite.com/">Mailerlite</a> for my newsletter</li>
+    <li><a href="https://www.zoho.com/forms/">Zoho Forms</a> for the contact form.</li>
+</ul>
+
+<p>Some things may be a bit broken as this transition is complete. It’s hard to move a website that’s operated using the same software for 12 years. But hopefully it will all be worth it.</p>
+
+<p>It’s entirely possible that I switch software again as I use Jekyll more, or even switch back to WordPress.  Ghost, Hugo and Publii were all contenders at various points.</p>
+
+<p>I’m only interested in something that works and doesn’t require a lot of maintenance or pain to change or use the site. I will happily switch again if needed.</p>
+
+<p>It has been quite an adventure.</p>]]></content><author><name>Philip</name></author><category term="Meta" /><category term="Meta" /><summary type="html"><![CDATA[It’s hard to say goodbye sometimes.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-dark-solid.png" /><media:content medium="image" url="https://raw.githubusercontent.com/jekyll/brand/master/jekyll-logo-dark-solid.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to export Flickr photos with metadata attached</title><link href="https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached" rel="alternate" type="text/html" title="How to export Flickr photos with metadata attached" /><published>2023-09-11T00:02:21-05:00</published><updated>2023-09-11T00:02:21-05:00</updated><id>https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached</id><content type="html" xml:base="https://newsite.philipmallis.com/blog/2023/09/11/how-to-export-flickr-photos-with-metadata-attached"><![CDATA[<p>I have been a user of Flickr for about eight years. While I have no plans to move away, there are many reasons why someone would want to export their photos and videos.</p>
 
 <p>Having spent many hours reading through forum posts, documentation and Github repositories, I want to share my method of how I achieved this. It wasn’t easy.</p>
 
@@ -589,20 +629,4 @@
 
 <hr />
 
-<p>So that’s all for now! Stay tuned for the next post which will answer the same questions, but using 2020-21 data, recorded during the COVID-19 pandemic. If you’re not already subscribed for updates, you can do so using your email address in the box on the right hand side.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Train" /><summary type="html"><![CDATA[This is a kind of update of a previous post that I did back in 2019 using 2016-17 patronage data.]]></summary></entry><entry><title type="html">Railway station and tram stop patronage in Victoria for 2008-2021</title><link href="https://newsite.philipmallis.com/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021" rel="alternate" type="text/html" title="Railway station and tram stop patronage in Victoria for 2008-2021" /><published>2022-03-08T19:00:00-06:00</published><updated>2022-03-08T19:00:00-06:00</updated><id>https://newsite.philipmallis.com/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021</id><content type="html" xml:base="https://newsite.philipmallis.com/blog/2022/03/08/railway-station-and-tram-stop-patronage-in-victoria-for-2008-2021"><![CDATA[<p>Good news! The State Government has <a href="https://www.danielbowen.com/2022/03/03/vic-pt-patronage-data/">finally begun releasing</a> patronage data for <a href="https://discover.data.vic.gov.au/dataset/annual-metropolitan-train-station-patronage-station-entries">railway</a> <a href="https://discover.data.vic.gov.au/dataset/annual-regional-train-patronage-station-entries">stations</a> and <a href="https://discover.data.vic.gov.au/dataset/annual-tram-stop-patronage">tram stops</a> in Victoria.</p>
-
-<p>I will do some separate posts analysing the data, but first I am publishing the data below for metropolitan and regional railway stations, as well as tram stops that have been released by the Department of Transport combined with my previous years of data collection:</p>
-
-<ul>
-  <li><a href="https://docs.google.com/spreadsheets/d/1r17nHKfPNSuB-2B3Knwv8QKcY4LVE20I/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Metropolitan railway station patronage 2008 – 2021</a></li>
-  <li><a href="https://docs.google.com/spreadsheets/d/1ZNfXV_HdEcnNAhLsM1CSCE82avMcxBYj/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Regional railway station patronage 2013 – 2021</a></li>
-  <li><a href="https://docs.google.com/spreadsheets/d/11IRid6oYA-9bVGFJgBWl4GNkhCPSCaz5/edit?usp=sharing&amp;ouid=112666567849728890648&amp;rtpof=true&amp;sd=true">Tram stop patronage 2018 – 2021</a></li>
-</ul>
-
-<h2 id="notes">Notes</h2>
-
-<p>For metropolitan and regional stations, I have combined these with the <a href="https://philipmallis.com/blog/2019/11/14/station-patronage-in-melbourne-for-2005-2019/" title="Station patronage in Melbourne for 2005-2019">previous data</a> that I obtained from the Department a few years ago. This gives a full overview of data from 2008 to 2021 (with two gaps in the middle due to lack of data collection). V/Line stats are also only available back to 2013 and do not include stations on the Overland.</p>
-
-<p>For tram stops, unfortunately the previous data published in about 2011 has been removed from the Data Vic website. As a result, there is no publicly available data prior to 2017 to compare. Yarra Trams or PTV have also changed some stop IDs and names. I’ve tried my best to account for these but it is almost impossible to determine in some case due to the limited data that is available to cross-reference.</p>
-
-<p>Unfortunately bus stop and bus route data has not been published at this time, making my data requests from 2019 (<a href="https://philipmallis.com/blog/2020/02/28/melbourne-bus-route-patronage-data-for-2008-2019/" title="Melbourne bus route patronage data for 2008 – 2019">bus routes</a> and <a href="https://maps.philipmallis.com/victorian-bus-stop-patronage/">bus stops</a>) the latest available as far as I know.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><summary type="html"><![CDATA[Good news! The State Government has finally begun releasing patronage data for railway stations and tram stops in Victoria.]]></summary></entry></feed>
+<p>So that’s all for now! Stay tuned for the next post which will answer the same questions, but using 2020-21 data, recorded during the COVID-19 pandemic. If you’re not already subscribed for updates, you can do so using your email address in the box on the right hand side.</p>]]></content><author><name>Philip</name></author><category term="Transport" /><category term="Train" /><summary type="html"><![CDATA[This is a kind of update of a previous post that I did back in 2019 using 2016-17 patronage data.]]></summary></entry></feed>
