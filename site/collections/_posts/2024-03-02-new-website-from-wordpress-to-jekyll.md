@@ -14,7 +14,7 @@ It's hard to say goodbye sometimes.
 
 I have been running a personal website since my council election campaign 14 years ago in February 2012. I started on WordPress at the time - back in <a href="https://wordpress.org/documentation/wordpress-version/version-3-3/">Version 3.3</a> when it looked like this:
 
-![Screenshot of a dashboard of Wordpress 3.3](/images/posts/wordpress-3-3-2.jpeg)
+![Screenshot of a dashboard of Wordpress 3.3](/images/posts/wordpress-3-3-2.jpg)
 
 As a non-developer this was a steep learning curve at the time. I knew nothing about DNS, web hosting or HTML. Over these years I have slowly taught myself some basic skills; although I'd say that I'm still very much a novice.
 
