@@ -1,1 +1,1 @@
-Sitemap: https://newsite.philipmallis.com/sitemap.xml
+Sitemap: https://philipmallis.com/sitemap.xml
