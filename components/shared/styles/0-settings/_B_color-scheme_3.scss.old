@@ -1,0 +1,30 @@
+/* Color Scheme */
+$primary-color: #212B40;
+$secondary-color: #212B40;
+$white: #fff;
+$dark: #110E38;
+$gray: #d9d9d9;
+$light-gray: #D9AA71;
+$blue-gray: #403227;
+
+$background-color: #D9C7B8;
+$background-color-alt: $white;
+
+$text-color: $dark;
+
+$heading-font-color: $text-color;
+
+$link-color: $text-color;
+$link-color-hover: $text-color;
+
+$button-color: $background-color-alt;
+$button-background-color: $primary-color;
+$button-background-hover: darken($primary-color, 5%);
+
+$border-color: $blue-gray;
+
+$hr-color: $text-color;
+$tr-color: #f0f0f0;
+
+$syntax-highlighting-background: #f3f3f3;
+
